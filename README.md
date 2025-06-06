@@ -12,6 +12,17 @@ The web-gui is available at:  http://localhost:8123
 
 The only user provided is: vm-user (password is vm-user)
 
+The instance includes an MQTT broker reachable using:
+```port: 1883
+  user: mqtt-user
+  password: mqtt-user    
+```
+The instance includes an MCP Server reachable using: 
+```http://localhost:8123/mcp_server/sse```
+
+plus a long-lived API token:
+
+```API_ACCESS_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0OTA4YzBjZmRlMTg0ZjAyOTE4Zjg4ODdjMzBiNGI4OCIsImlhdCI6MTc0ODUyNzQ4MCwiZXhwIjoyMDYzODg3NDgwfQ.MmXRZ38vUlKNijfYaBEdR_A2MoX7NwY_88lBe1BddfA```
 
 ## Build
 
@@ -26,6 +37,9 @@ This version uses docker-compose to deploy the containers:
 `docker-compose up -d`
 
 Once all the containers are running, the web GUI should be available and you should be able to log into Home Assistant
+
+This deployment uses volumes and so the configuration is persistent between invocations of docker-compose. 
+Remove the `ha_config` and `ha_mosquitto` docker volumes to start from initial state again.
 
 
 ## Simulate
