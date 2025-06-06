@@ -54,7 +54,15 @@ Remove the `ha_config` and `ha_mosquitto` docker volumes to start from initial s
 
 ## Simulate
 
-Once deployed the instance will remain in a static state. A python script is provided in the control directory which can be used to change the state of the various devices within the Home Assistant instance.
+Once deployed the instance will remain in a static state. A python script is provided in the control directory which can be used to change the state of the various devices within the Home Assistant instance. 
+
+The script uses the mosquitto_pub and mosquitto_sub commands.
+
+Ubuntu installation:
+``apt install mosquitto-clients``
+
+macos installation:
+``brew install mosquitto``
 
 Example invocation:
 
@@ -62,8 +70,11 @@ Example invocation:
 
 This will change the state of all the devices every 5 seconds (some randomness is used to decide whether to change the state of any particular sensor).
 
+Alternatively, the script can be run inside the data container (thus requiring no extra installation on the host)
 
+Example invocation:
 
+``docker exec -it data /data/control/simulate.py --interval 2 --all``
 
 
 
