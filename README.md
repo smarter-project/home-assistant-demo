@@ -29,7 +29,7 @@ The instance includes an MCP Server reachable using:
 
 ```http://localhost:8123/mcp_server/sse```
 
-plus this long-lived API token for authentication:
+This long-lived API token should be used for authentication:
 
 ```API_ACCESS_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0OTA4YzBjZmRlMTg0ZjAyOTE4Zjg4ODdjMzBiNGI4OCIsImlhdCI6MTc0ODUyNzQ4MCwiZXhwIjoyMDYzODg3NDgwfQ.MmXRZ38vUlKNijfYaBEdR_A2MoX7NwY_88lBe1BddfA```
 
@@ -45,7 +45,7 @@ This version uses docker-compose to deploy the containers:
 
 `docker-compose up -d`
 
-On macos docker must be confiured to allow host-networking: 
+On macos docker must be configured to allow host-networking: 
 In docker desktop goto: Settings->Resources->Network and enable host networking
 
 Once all the containers are running, the web GUI should be available and you should be able to log into Home Assistant
