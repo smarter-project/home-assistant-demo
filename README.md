@@ -60,7 +60,7 @@ Example invocation:
 
 `control/simulate.py --interval 5 --all`
 
-This will change the state of all the devices every 5 seconds (some randomness is used to decide whether to change the state of any particualr sensor).
+This will change the state of all the devices every 5 seconds (some randomness is used to decide whether to change the state of any particular sensor).
 
 
 
