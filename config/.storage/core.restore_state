@@ -1,0 +1,303 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "core.restore_state",
+  "data": [
+    {
+      "state": {"entity_id":"conversation.home_assistant","state":"unknown","attributes":{"friendly_name":"Home Assistant","supported_features":1},"last_changed":"2025-06-06T10:16:05.711743+00:00","last_reported":"2025-06-06T10:16:05.711743+00:00","last_updated":"2025-06-06T10:16:05.711743+00:00","context":{"id":"01JX2BV6AF43CD4F0XWDVE55HR","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"person.vm_user","state":"unknown","attributes":{"editable":true,"id":"vm_user","device_trackers":[],"user_id":"4fa56bbed68943f49cedb80d41e21529","friendly_name":"vm-user"},"last_changed":"2025-06-06T10:16:05.951095+00:00","last_reported":"2025-06-06T10:16:06.767689+00:00","last_updated":"2025-06-06T10:16:06.767689+00:00","context":{"id":"01JX2BV7BF5TR7HZNBK6VZ7HWM","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"person.mqtt_user","state":"unknown","attributes":{"editable":true,"id":"mqtt_user","device_trackers":[],"user_id":"85eacdae0c4346fe8b80eee0b4a23c2e","friendly_name":"mqtt-user"},"last_changed":"2025-06-06T10:16:05.951143+00:00","last_reported":"2025-06-06T10:16:06.767734+00:00","last_updated":"2025-06-06T10:16:06.767734+00:00","context":{"id":"01JX2BV7BF8PEB9HVN1QDVQFZX","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.test1","state":"on","attributes":{"id":"1748955940402","last_triggered":"2025-06-04T15:31:08.791675+00:00","mode":"single","current":0,"friendly_name":"test1"},"last_changed":"2025-06-06T10:16:06.432767+00:00","last_reported":"2025-06-06T10:16:06.432767+00:00","last_updated":"2025-06-06T10:16:06.432767+00:00","context":{"id":"01JX2BV71062B15SVPR7KMRZWZ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"tts.google_translate_en_com","state":"unknown","attributes":{"friendly_name":"Google Translate en com"},"last_changed":"2025-06-06T10:16:06.583663+00:00","last_reported":"2025-06-06T10:16:06.583663+00:00","last_updated":"2025-06-06T10:16:06.583663+00:00","context":{"id":"01JX2BV75QE9EEXRAGRRHX5P2M","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"light.living_room_living_room_light","state":"on","attributes":{"supported_color_modes":["onoff"],"color_mode":"onoff","assumed_state":true,"friendly_name":"Living Room Light","supported_features":0},"last_changed":"2025-06-06T10:43:00.468677+00:00","last_reported":"2025-06-06T10:43:00.468677+00:00","last_updated":"2025-06-06T10:43:00.468677+00:00","context":{"id":"01JX2DCF7MTK85T4NSGYAAPH03","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"light.bedroom_1_light_bedroom_1_light","state":"on","attributes":{"supported_color_modes":["onoff"],"color_mode":"onoff","assumed_state":true,"friendly_name":"Bedroom 1 Light","supported_features":0},"last_changed":"2025-06-06T10:42:59.368089+00:00","last_reported":"2025-06-06T10:42:59.368089+00:00","last_updated":"2025-06-06T10:42:59.368089+00:00","context":{"id":"01JX2DCE5853ZG5DH6KQTW59PE","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"light.bedroom_2_light_bedroom_2_light","state":"on","attributes":{"supported_color_modes":["onoff"],"color_mode":"onoff","assumed_state":true,"friendly_name":"Bedroom 2 Light","supported_features":0},"last_changed":"2025-06-06T10:43:00.491513+00:00","last_reported":"2025-06-06T10:43:00.491513+00:00","last_updated":"2025-06-06T10:43:00.491513+00:00","context":{"id":"01JX2DCF8B7CKYN3ADB5FSSZV7","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"light.hallway_light_hallway_light","state":"on","attributes":{"supported_color_modes":["onoff"],"color_mode":"onoff","assumed_state":true,"friendly_name":"Hallway Light","supported_features":0},"last_changed":"2025-06-06T10:43:00.503268+00:00","last_reported":"2025-06-06T10:43:00.503268+00:00","last_updated":"2025-06-06T10:43:00.503268+00:00","context":{"id":"01JX2DCF8QB3VNPYN9MZBJ9JAX","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"light.kitchen_light_kitchen_light","state":"on","attributes":{"supported_color_modes":["onoff"],"color_mode":"onoff","assumed_state":true,"friendly_name":"Kitchen Light","supported_features":0},"last_changed":"2025-06-06T10:43:00.512452+00:00","last_reported":"2025-06-06T10:43:00.512452+00:00","last_updated":"2025-06-06T10:43:00.512452+00:00","context":{"id":"01JX2DCF90058KM0YXNH704GBF","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"light.garage_light_garage_light","state":"off","attributes":{"supported_color_modes":["onoff"],"color_mode":null,"assumed_state":true,"friendly_name":"Garage Light","supported_features":0},"last_changed":"2025-06-06T10:43:00.521002+00:00","last_reported":"2025-06-06T10:43:00.521002+00:00","last_updated":"2025-06-06T10:43:00.521002+00:00","context":{"id":"01JX2DCF99HYW4DWF0JKHRRWGA","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"light.bathroom_light_bathroom_light","state":"on","attributes":{"supported_color_modes":["onoff"],"color_mode":"onoff","assumed_state":true,"friendly_name":"Bathroom Light","supported_features":0},"last_changed":"2025-06-06T10:43:00.530612+00:00","last_reported":"2025-06-06T10:43:00.530612+00:00","last_updated":"2025-06-06T10:43:00.530612+00:00","context":{"id":"01JX2DCF9JMGBPYVMBGY39618J","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"light.garden_light","state":"on","attributes":{"supported_color_modes":["onoff"],"color_mode":"onoff","assumed_state":true,"friendly_name":"Garden Light","supported_features":0},"last_changed":"2025-06-06T10:42:59.439419+00:00","last_reported":"2025-06-06T10:42:59.439419+00:00","last_updated":"2025-06-06T10:42:59.439419+00:00","context":{"id":"01JX2DCE7FGH83CMS4P3SPARY2","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.kitchen_kitchen_window","state":"off","attributes":{"device_class":"window","friendly_name":"Kitchen  Window"},"last_changed":"2025-06-06T10:16:26.982505+00:00","last_reported":"2025-06-06T10:16:26.982505+00:00","last_updated":"2025-06-06T10:16:26.982505+00:00","context":{"id":"01JX2BVV3634RAJH8NJPBGRANP","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.bathroom_bathroom_window","state":"off","attributes":{"device_class":"window","friendly_name":"Bathroom  Window"},"last_changed":"2025-06-06T10:16:26.982674+00:00","last_reported":"2025-06-06T10:16:26.982674+00:00","last_updated":"2025-06-06T10:16:26.982674+00:00","context":{"id":"01JX2BVV36JD5G14KAEXGV2D7T","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.bedroom_1_bedroom_1_window","state":"off","attributes":{"device_class":"window","friendly_name":"Bedroom 1  Window"},"last_changed":"2025-06-06T10:16:26.983217+00:00","last_reported":"2025-06-06T10:16:26.983217+00:00","last_updated":"2025-06-06T10:16:26.983217+00:00","context":{"id":"01JX2BVV37Y1MS0VJCJM85MTJ2","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.bedroom_2_bedroom_2_window","state":"off","attributes":{"device_class":"window","friendly_name":"Bedroom 2  Window"},"last_changed":"2025-06-06T10:16:26.983937+00:00","last_reported":"2025-06-06T10:16:26.983937+00:00","last_updated":"2025-06-06T10:16:26.983937+00:00","context":{"id":"01JX2BVV3784SWD1T98MRSEDBR","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.living_room_livingroomwindow","state":"off","attributes":{"device_class":"window","friendly_name":"Living Room  Window"},"last_changed":"2025-06-06T10:16:26.984317+00:00","last_reported":"2025-06-06T10:16:26.984317+00:00","last_updated":"2025-06-06T10:16:26.984317+00:00","context":{"id":"01JX2BVV38KNB5K57NBMZB18ZH","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.living_room_sensor_living_room_temperature","state":"18.0","attributes":{"unit_of_measurement":"°C","device_class":"temperature","friendly_name":"Living Room  Temperature"},"last_changed":"2025-06-06T10:42:52.830003+00:00","last_reported":"2025-06-06T10:42:52.830003+00:00","last_updated":"2025-06-06T10:42:52.830003+00:00","context":{"id":"01JX2DC7RYKTRYM3E3J2P296E0","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "18.0",
+        "native_unit_of_measurement": "°C"
+      },
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.bedroom_1_sensor_bedroom_1_temperature","state":"16.0","attributes":{"unit_of_measurement":"°C","device_class":"temperature","friendly_name":"Bedroom 1  Temperature"},"last_changed":"2025-06-06T10:42:55.020262+00:00","last_reported":"2025-06-06T10:42:55.020262+00:00","last_updated":"2025-06-06T10:42:55.020262+00:00","context":{"id":"01JX2DC9XCP6JMAK8BZ7M7S286","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "16.0",
+        "native_unit_of_measurement": "°C"
+      },
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.bedroom_2_sensor_bedroom_1_temperature","state":"18.0","attributes":{"unit_of_measurement":"°C","device_class":"temperature","friendly_name":"Bedroom 2  Temperature"},"last_changed":"2025-06-06T10:42:55.046619+00:00","last_reported":"2025-06-06T10:42:55.046619+00:00","last_updated":"2025-06-06T10:42:55.046619+00:00","context":{"id":"01JX2DC9Y6AWE6VHXKR2F6VC3G","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "18.0",
+        "native_unit_of_measurement": "°C"
+      },
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.kitchen_sensor_bedroom_1_temperature","state":"25.2","attributes":{"unit_of_measurement":"°C","device_class":"temperature","friendly_name":"Kitchen  Temperature"},"last_changed":"2025-06-06T10:42:57.214170+00:00","last_reported":"2025-06-06T10:42:57.214170+00:00","last_updated":"2025-06-06T10:42:57.214170+00:00","context":{"id":"01JX2DCC1Y3Z3Z25962NFB5BRQ","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "25.2",
+        "native_unit_of_measurement": "°C"
+      },
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.hallway_sensor_hallway_temperature","state":"18.8","attributes":{"unit_of_measurement":"°C","device_class":"temperature","friendly_name":"Hallway  Temperature"},"last_changed":"2025-06-06T10:42:59.378908+00:00","last_reported":"2025-06-06T10:42:59.378908+00:00","last_updated":"2025-06-06T10:42:59.378908+00:00","context":{"id":"01JX2DCE5JXSY91K4CX9DDF8X0","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "18.8",
+        "native_unit_of_measurement": "°C"
+      },
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.garage_sensor_garage_temperature","state":"25.4","attributes":{"unit_of_measurement":"°C","device_class":"temperature","friendly_name":"Garage  Temperature"},"last_changed":"2025-06-06T10:42:59.394378+00:00","last_reported":"2025-06-06T10:42:59.394378+00:00","last_updated":"2025-06-06T10:42:59.394378+00:00","context":{"id":"01JX2DCE6260T5J8RRDRC07NHC","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "25.4",
+        "native_unit_of_measurement": "°C"
+      },
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.bathroom_sensor_bathroom_temperature","state":"18.2","attributes":{"unit_of_measurement":"°C","device_class":"temperature","friendly_name":"Bathroom  Temperature"},"last_changed":"2025-06-06T10:42:59.407903+00:00","last_reported":"2025-06-06T10:42:59.407903+00:00","last_updated":"2025-06-06T10:42:59.407903+00:00","context":{"id":"01JX2DCE6FDZKSVJW2AN7QPVK6","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "18.2",
+        "native_unit_of_measurement": "°C"
+      },
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.front_door_sensor_front_door","state":"off","attributes":{"device_class":"door","friendly_name":"Front Door"},"last_changed":"2025-06-06T10:16:26.987226+00:00","last_reported":"2025-06-06T10:16:26.987226+00:00","last_updated":"2025-06-06T10:16:26.987226+00:00","context":{"id":"01JX2BVV3BHTR8ETKRC4ZJKESQ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.back_door_sensor_back_door","state":"off","attributes":{"device_class":"door","friendly_name":"Back Door"},"last_changed":"2025-06-06T10:16:26.987360+00:00","last_reported":"2025-06-06T10:16:26.987360+00:00","last_updated":"2025-06-06T10:16:26.987360+00:00","context":{"id":"01JX2BVV3B5AFQEEEN9TV2PET5","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.garage_door_sensor_garage_door","state":"off","attributes":{"device_class":"door","friendly_name":"Garage Door"},"last_changed":"2025-06-06T10:16:26.987715+00:00","last_reported":"2025-06-06T10:16:26.987715+00:00","last_updated":"2025-06-06T10:16:26.987715+00:00","context":{"id":"01JX2BVV3BRV1HX9YC4YM6BS9H","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.kitchen_kitchen_motion","state":"off","attributes":{"device_class":"motion","friendly_name":"Kitchen Motion"},"last_changed":"2025-06-06T10:38:35.938042+00:00","last_reported":"2025-06-06T10:38:35.938042+00:00","last_updated":"2025-06-06T10:38:35.938042+00:00","context":{"id":"01JX2D4CX2RPACNVYWPGGNY05Y","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.bathroom_bathroom_motion","state":"off","attributes":{"device_class":"motion","friendly_name":"Bathroom  Motion"},"last_changed":"2025-06-06T10:38:40.280964+00:00","last_reported":"2025-06-06T10:38:40.280964+00:00","last_updated":"2025-06-06T10:38:40.280964+00:00","context":{"id":"01JX2D4H4RFVTBQZ7QEVKZ6KWR","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.bedroom_1_bedroom_1_motion","state":"off","attributes":{"device_class":"motion","friendly_name":"Bedroom 1  Motion"},"last_changed":"2025-06-06T10:16:26.989230+00:00","last_reported":"2025-06-06T10:16:26.989230+00:00","last_updated":"2025-06-06T10:16:26.989230+00:00","context":{"id":"01JX2BVV3DJEJKG8F50FYPG8X1","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.bedroom_2_bedroom_2_motion","state":"off","attributes":{"device_class":"motion","friendly_name":"Bedroom 2  Motion"},"last_changed":"2025-06-06T10:40:19.685425+00:00","last_reported":"2025-06-06T10:40:19.685425+00:00","last_updated":"2025-06-06T10:40:19.685425+00:00","context":{"id":"01JX2D7J75AP085F7Z48GE94B7","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.living_room_living_room_motion","state":"off","attributes":{"device_class":"motion","friendly_name":"Living Room  Motion"},"last_changed":"2025-06-06T10:16:26.989787+00:00","last_reported":"2025-06-06T10:16:26.989787+00:00","last_updated":"2025-06-06T10:16:26.989787+00:00","context":{"id":"01JX2BVV3DEW16WA29851NPTEW","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.garden_garden_motion","state":"off","attributes":{"device_class":"motion","friendly_name":"Garden   Motion"},"last_changed":"2025-06-06T10:16:26.991298+00:00","last_reported":"2025-06-06T10:16:26.991298+00:00","last_updated":"2025-06-06T10:16:26.991298+00:00","context":{"id":"01JX2BVV3FBX5GC7G0A0YKZFYN","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.garage_garage_motion","state":"off","attributes":{"device_class":"motion","friendly_name":"Garage  Motion"},"last_changed":"2025-06-06T10:38:40.329560+00:00","last_reported":"2025-06-06T10:38:40.329560+00:00","last_updated":"2025-06-06T10:38:40.329560+00:00","context":{"id":"01JX2D4H69DF4DZZK7HZ0G1EHF","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.hallway_motion","state":"on","attributes":{"device_class":"motion","friendly_name":"Hallway  Motion"},"last_changed":"2025-06-06T10:40:21.961213+00:00","last_reported":"2025-06-06T10:40:21.961213+00:00","last_updated":"2025-06-06T10:40:21.961213+00:00","context":{"id":"01JX2D7ME98B48WT3Q6QBWDGHT","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.kitchen_presence","state":"off","attributes":{"device_class":"presence","friendly_name":"Kitchen Presence"},"last_changed":"2025-06-06T10:16:26.993350+00:00","last_reported":"2025-06-06T10:16:26.993350+00:00","last_updated":"2025-06-06T10:16:26.993350+00:00","context":{"id":"01JX2BVV3HJ7KV4SCF15169FDZ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.bathroom_presence","state":"off","attributes":{"device_class":"presence","friendly_name":"Bathroom  Presence"},"last_changed":"2025-06-06T10:16:26.993572+00:00","last_reported":"2025-06-06T10:16:26.993572+00:00","last_updated":"2025-06-06T10:16:26.993572+00:00","context":{"id":"01JX2BVV3H9QTV1H9QQQXBV7SV","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.bedroom_1_presence","state":"off","attributes":{"device_class":"presence","friendly_name":"Bedroom 1  Presence"},"last_changed":"2025-06-06T10:16:26.994140+00:00","last_reported":"2025-06-06T10:16:26.994140+00:00","last_updated":"2025-06-06T10:16:26.994140+00:00","context":{"id":"01JX2BVV3J9RY9Z7WCY3TBVNF1","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.bedroom_2_presence","state":"off","attributes":{"device_class":"presence","friendly_name":"Bedroom 2  Presence"},"last_changed":"2025-06-06T10:16:26.994689+00:00","last_reported":"2025-06-06T10:16:26.994689+00:00","last_updated":"2025-06-06T10:16:26.994689+00:00","context":{"id":"01JX2BVV3JMXGCFRD5P73YDF0E","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.living_room_presence","state":"off","attributes":{"device_class":"presence","friendly_name":"Living Room  Presence"},"last_changed":"2025-06-06T10:16:26.995215+00:00","last_reported":"2025-06-06T10:16:26.995215+00:00","last_updated":"2025-06-06T10:16:26.995215+00:00","context":{"id":"01JX2BVV3KZXG4WZ3VFC7W3Y1P","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.garden_presence","state":"off","attributes":{"device_class":"presence","friendly_name":"Garden   Presence"},"last_changed":"2025-06-06T10:16:26.995416+00:00","last_reported":"2025-06-06T10:16:26.995416+00:00","last_updated":"2025-06-06T10:16:26.995416+00:00","context":{"id":"01JX2BVV3K5E3NCYT82Q2ENZ5Y","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.garage_presence","state":"off","attributes":{"device_class":"presence","friendly_name":"Garage  Presence"},"last_changed":"2025-06-06T10:16:26.995825+00:00","last_reported":"2025-06-06T10:16:26.995825+00:00","last_updated":"2025-06-06T10:16:26.995825+00:00","context":{"id":"01JX2BVV3KP5TRB5H7565SFDJ6","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T12:54:08.348008+00:00"
+    },
+    {
+      "state": {"entity_id":"update.home_assistant_supervisor_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"2025.05.3","in_progress":false,"latest_version":"2025.05.3","release_summary":null,"release_url":"https://github.com/home-assistant/supervisor/releases/tag/2025.05.3","skipped_version":null,"title":"Home Assistant Supervisor","update_percentage":null,"entity_picture":"https://brands.home-assistant.io/hassio/icon.png","friendly_name":"Home Assistant Supervisor Update","supported_features":1},"last_changed":"2025-06-06T08:42:00.400411+00:00","last_reported":"2025-06-06T08:42:00.400411+00:00","last_updated":"2025-06-06T08:42:00.400411+00:00","context":{"id":"01JX26EXAGJ1J2RTBB29N730DW","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T08:42:00.914983+00:00"
+    },
+    {
+      "state": {"entity_id":"update.home_assistant_core_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"2025.5.2","in_progress":false,"latest_version":"2025.5.3","release_summary":null,"release_url":"https://www.home-assistant.io/latest-release-notes/","skipped_version":"2025.5.3","title":"Home Assistant Core","update_percentage":null,"entity_picture":"https://brands.home-assistant.io/homeassistant/icon.png","friendly_name":"Home Assistant Core Update","supported_features":11},"last_changed":"2025-06-06T08:42:00.400491+00:00","last_reported":"2025-06-06T08:42:00.400491+00:00","last_updated":"2025-06-06T08:42:00.400491+00:00","context":{"id":"01JX26EXAG6BSVMR2KZZRWKGV5","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T08:42:00.914983+00:00"
+    },
+    {
+      "state": {"entity_id":"update.matter_server_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"8.0.0","in_progress":false,"latest_version":"8.0.0","release_summary":null,"release_url":null,"skipped_version":null,"title":"Matter Server","update_percentage":null,"entity_picture":"/api/hassio/addons/core_matter_server/icon","friendly_name":"Matter Server Update","supported_features":25},"last_changed":"2025-06-06T08:42:00.400542+00:00","last_reported":"2025-06-06T08:42:00.400542+00:00","last_updated":"2025-06-06T08:42:00.400542+00:00","context":{"id":"01JX26EXAGB2X1J01GCPPYT3Q3","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T08:42:00.914983+00:00"
+    },
+    {
+      "state": {"entity_id":"update.terminal_ssh_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"9.17.0","in_progress":false,"latest_version":"9.17.0","release_summary":null,"release_url":null,"skipped_version":null,"title":"Terminal & SSH","update_percentage":null,"entity_picture":"/api/hassio/addons/core_ssh/icon","friendly_name":"Terminal & SSH Update","supported_features":25},"last_changed":"2025-06-06T08:42:00.400577+00:00","last_reported":"2025-06-06T08:42:00.400577+00:00","last_updated":"2025-06-06T08:42:00.400577+00:00","context":{"id":"01JX26EXAGH58G6HVB5AWMPS9T","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T08:42:00.914983+00:00"
+    },
+    {
+      "state": {"entity_id":"update.file_editor_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"5.8.0","in_progress":false,"latest_version":"5.8.0","release_summary":null,"release_url":null,"skipped_version":null,"title":"File editor","update_percentage":null,"entity_picture":"/api/hassio/addons/core_configurator/icon","friendly_name":"File editor Update","supported_features":25},"last_changed":"2025-06-06T08:42:00.400831+00:00","last_reported":"2025-06-06T08:42:00.400831+00:00","last_updated":"2025-06-06T08:42:00.400831+00:00","context":{"id":"01JX26EXAGFDKR3287TCGWHBGV","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T08:42:00.914983+00:00"
+    },
+    {
+      "state": {"entity_id":"update.mosquitto_broker_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"6.5.1","in_progress":false,"latest_version":"6.5.1","release_summary":null,"release_url":null,"skipped_version":null,"title":"Mosquitto broker","update_percentage":null,"entity_picture":"/api/hassio/addons/core_mosquitto/icon","friendly_name":"Mosquitto broker Update","supported_features":25},"last_changed":"2025-06-06T08:42:00.400873+00:00","last_reported":"2025-06-06T08:42:00.400873+00:00","last_updated":"2025-06-06T08:42:00.400873+00:00","context":{"id":"01JX26EXAG4XSWYXAKRZKMR4Q6","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T08:42:00.914983+00:00"
+    },
+    {
+      "state": {"entity_id":"update.log_viewer_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"0.17.1","in_progress":false,"latest_version":"0.17.1","release_summary":null,"release_url":null,"skipped_version":null,"title":"Log Viewer","update_percentage":null,"entity_picture":"/api/hassio/addons/a0d7b954_logviewer/icon","friendly_name":"Log Viewer Update","supported_features":25},"last_changed":"2025-06-06T08:42:00.400905+00:00","last_reported":"2025-06-06T08:42:00.400905+00:00","last_updated":"2025-06-06T08:42:00.400905+00:00","context":{"id":"01JX26EXAGGES5V3B9CKCWMCEM","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T08:42:00.914983+00:00"
+    },
+    {
+      "state": {"entity_id":"update.home_assistant_operating_system_update","state":"unknown","attributes":{"auto_update":false,"display_precision":0,"installed_version":"15.2","in_progress":false,"latest_version":null,"release_summary":null,"release_url":"https://github.com/home-assistant/operating-system/commits/dev","skipped_version":null,"title":"Home Assistant Operating System","update_percentage":null,"entity_picture":"https://brands.home-assistant.io/homeassistant/icon.png","friendly_name":"Home Assistant Operating System Update","supported_features":11},"last_changed":"2025-06-06T08:42:00.400956+00:00","last_reported":"2025-06-06T08:42:00.400956+00:00","last_updated":"2025-06-06T08:42:00.400956+00:00","context":{"id":"01JX26EXAGQW14EWTRK21E5TXV","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-06T08:42:00.914983+00:00"
+    },
+    {
+      "state": {"entity_id":"alarm_control_panel.home_alarm_2","state":"disarmed","attributes":{"code_format":"number","changed_by":null,"code_arm_required":false,"previous_state":null,"next_state":null,"friendly_name":"Home Alarm","supported_features":11},"last_changed":"2025-06-04T17:07:17.375425+00:00","last_reported":"2025-06-04T17:07:17.375425+00:00","last_updated":"2025-06-04T17:07:17.375425+00:00","context":{"id":"01JWXYJNQW9KYS3X58D4Z599PV","parent_id":null,"user_id":"4fa56bbed68943f49cedb80d41e21529"}},
+      "extra_data": null,
+      "last_seen": "2025-06-04T20:05:41.440499+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.trigger_alarm_while_armed_away","state":"on","attributes":{"last_triggered":"2025-06-03T10:27:40.520088+00:00","mode":"single","current":0,"friendly_name":"Trigger alarm while armed away"},"last_changed":"2025-06-03T10:26:12.356720+00:00","last_reported":"2025-06-03T10:27:40.522755+00:00","last_updated":"2025-06-03T10:27:40.522755+00:00","context":{"id":"01JWTNA7V6HY6D4X8BADVK4SV9","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-03T10:28:35.237203+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.send_notification_when_alarm_triggered","state":"on","attributes":{"last_triggered":null,"mode":"single","current":0,"friendly_name":"Send notification when alarm triggered"},"last_changed":"2025-06-03T10:48:43.933096+00:00","last_reported":"2025-06-03T10:48:43.933096+00:00","last_updated":"2025-06-03T10:48:43.933096+00:00","context":{"id":"01JWTPGSMX9W0M3XCSZZDDVG0K","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-03T12:50:27.195500+00:00"
+    },
+    {
+      "state": {"entity_id":"update.advanced_ssh_web_terminal_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"20.0.2","in_progress":false,"latest_version":"20.0.2","release_summary":null,"release_url":null,"skipped_version":null,"title":"Advanced SSH & Web Terminal","update_percentage":null,"entity_picture":"/api/hassio/addons/a0d7b954_ssh/icon","friendly_name":"Advanced SSH & Web Terminal Update","supported_features":25},"last_changed":"2025-06-04T15:35:19.644441+00:00","last_reported":"2025-06-04T15:35:19.644621+00:00","last_updated":"2025-06-04T15:35:19.644441+00:00","context":{"id":"01JWXSA9AWE22JHHYRYC2WE2KV","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-06-04T15:45:19.800673+00:00"
+    }
+  ]
+}

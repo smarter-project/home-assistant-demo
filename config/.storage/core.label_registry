@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "minor_version": 2,
+  "key": "core.label_registry",
+  "data": {
+    "labels": [
+      {
+        "color": null,
+        "description": null,
+        "icon": null,
+        "label_id": "security",
+        "name": "Security",
+        "created_at": "2025-05-22T15:05:47.683562+00:00",
+        "modified_at": "2025-05-22T15:05:47.683566+00:00"
+      }
+    ]
+  }
+}

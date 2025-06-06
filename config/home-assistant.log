@@ -1,0 +1,69 @@
+2025-06-06 11:16:26.990 WARNING (MainThread) [homeassistant.components.automation] Error evaluating condition in 'test1':
+In 'condition':
+  In 'state':
+    In 'state' condition: unknown entity alarm_control_panel.home_alarm_2
+2025-06-06 11:16:31.370 WARNING (MainThread) [homeassistant.components.automation] Error evaluating condition in 'test1':
+In 'condition':
+  In 'state':
+    In 'state' condition: unknown entity alarm_control_panel.home_alarm_2
+2025-06-06 11:16:38.532 WARNING (MainThread) [homeassistant.components.automation] Error evaluating condition in 'test1':
+In 'condition':
+  In 'state':
+    In 'state' condition: unknown entity alarm_control_panel.home_alarm_2
+2025-06-06 11:16:52.606 WARNING (MainThread) [homeassistant.components.automation] Error evaluating condition in 'test1':
+In 'condition':
+  In 'state':
+    In 'state' condition: unknown entity alarm_control_panel.home_alarm_2
+2025-06-06 11:21:29.687 WARNING (MainThread) [homeassistant.components.automation] Error evaluating condition in 'test1':
+In 'condition':
+  In 'state':
+    In 'state' condition: unknown entity alarm_control_panel.home_alarm_2
+2025-06-06 11:21:36.671 WARNING (MainThread) [homeassistant.components.automation] Error evaluating condition in 'test1':
+In 'condition':
+  In 'state':
+    In 'state' condition: unknown entity alarm_control_panel.home_alarm_2
+2025-06-06 11:37:53.324 WARNING (MainThread) [homeassistant.components.automation] Error evaluating condition in 'test1':
+In 'condition':
+  In 'state':
+    In 'state' condition: unknown entity alarm_control_panel.home_alarm_2
+2025-06-06 11:38:06.040 WARNING (MainThread) [homeassistant.components.automation] Error evaluating condition in 'test1':
+In 'condition':
+  In 'state':
+    In 'state' condition: unknown entity alarm_control_panel.home_alarm_2
+2025-06-06 11:38:10.342 WARNING (MainThread) [homeassistant.components.automation] Error evaluating condition in 'test1':
+In 'condition':
+  In 'state':
+    In 'state' condition: unknown entity alarm_control_panel.home_alarm_2
+2025-06-06 11:38:20.392 WARNING (MainThread) [homeassistant.components.automation] Error evaluating condition in 'test1':
+In 'condition':
+  In 'state':
+    In 'state' condition: unknown entity alarm_control_panel.home_alarm_2
+2025-06-06 11:38:24.679 WARNING (MainThread) [homeassistant.components.automation] Error evaluating condition in 'test1':
+In 'condition':
+  In 'state':
+    In 'state' condition: unknown entity alarm_control_panel.home_alarm_2
+2025-06-06 11:38:33.088 WARNING (MainThread) [homeassistant.components.automation] Error evaluating condition in 'test1':
+In 'condition':
+  In 'state':
+    In 'state' condition: unknown entity alarm_control_panel.home_alarm_2
+2025-06-06 11:38:38.837 WARNING (MainThread) [homeassistant.components.automation] Error evaluating condition in 'test1':
+In 'condition':
+  In 'state':
+    In 'state' condition: unknown entity alarm_control_panel.home_alarm_2
+2025-06-06 11:38:41.865 WARNING (MainThread) [homeassistant.components.automation] Error evaluating condition in 'test1':
+In 'condition':
+  In 'state':
+    In 'state' condition: unknown entity alarm_control_panel.home_alarm_2
+2025-06-06 11:39:20.182 WARNING (MainThread) [homeassistant.components.automation] Error evaluating condition in 'test1':
+In 'condition':
+  In 'state':
+    In 'state' condition: unknown entity alarm_control_panel.home_alarm_2
+2025-06-06 11:40:18.567 WARNING (MainThread) [homeassistant.components.automation] Error evaluating condition in 'test1':
+In 'condition':
+  In 'state':
+    In 'state' condition: unknown entity alarm_control_panel.home_alarm_2
+2025-06-06 11:40:21.962 WARNING (MainThread) [homeassistant.components.automation] Error evaluating condition in 'test1':
+In 'condition':
+  In 'state':
+    In 'state' condition: unknown entity alarm_control_panel.home_alarm_2
+2025-06-06 13:54:08.375 WARNING (MainThread) [homeassistant.components.mqtt.client] Error returned from MQTT server: The connection was lost.

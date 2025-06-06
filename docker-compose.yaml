@@ -1,0 +1,30 @@
+services:
+  data:
+    container_name: data
+    image: ha_data:1.0
+    network_mode: host  # Required for full device discovery on Linux (not supported on macOS/Windows)    
+    volumes:
+      - ha_config:/data/config
+      - ha_mosquitto:/data/mosquitto
+
+  homeassistant:
+    container_name: homeassistant
+    image: ghcr.io/home-assistant/home-assistant:stable
+    restart: unless-stopped
+    network_mode: host  # Required for full device discovery on Linux (not supported on macOS/Windows)
+    volumes:
+      - ha_config:/config
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - Europe/London
+      
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: mosquitto
+    network_mode: host  # Required for full device discovery on Linux (not supported on macOS/Windows)
+    volumes:
+      - ha_mosquitto:/mosquitto
+      
+volumes:
+  ha_config:
+  ha_mosquitto:

@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "minor_version": 1,
+  "key": "person",
+  "data": {
+    "items": [
+      {
+        "id": "vm_user",
+        "name": "vm-user",
+        "user_id": "4fa56bbed68943f49cedb80d41e21529",
+        "device_trackers": [],
+        "picture": null
+      },
+      {
+        "id": "mqtt_user",
+        "name": "mqtt-user",
+        "device_trackers": [],
+        "user_id": "85eacdae0c4346fe8b80eee0b4a23c2e",
+        "picture": null
+      }
+    ]
+  }
+}

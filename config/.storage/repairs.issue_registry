@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "minor_version": 2,
+  "key": "repairs.issue_registry",
+  "data": {
+    "issues": [
+      {
+        "created": "2025-05-16T21:41:30.408887+00:00",
+        "dismissed_version": "2025.5.2",
+        "domain": "hassio",
+        "is_persistent": false,
+        "issue_id": "unhealthy_system_privileged"
+      },
+      {
+        "created": "2025-05-21T16:22:24.753787+00:00",
+        "dismissed_version": "2025.5.2",
+        "domain": "mqtt",
+        "is_persistent": false,
+        "issue_id": "0x31f2169289e2b807"
+      },
+      {
+        "created": "2025-06-05T08:43:11.005538+00:00",
+        "dismissed_version": "2025.5.2",
+        "domain": "mqtt",
+        "is_persistent": false,
+        "issue_id": "-0x38cf0376a0754ed"
+      },
+      {
+        "created": "2025-06-05T08:48:28.958472+00:00",
+        "dismissed_version": "2025.5.2",
+        "domain": "mqtt",
+        "is_persistent": false,
+        "issue_id": "-0x1863f849411b13a0"
+      },
+      {
+        "created": "2025-06-05T08:54:46.008841+00:00",
+        "dismissed_version": "2025.5.2",
+        "domain": "mqtt",
+        "is_persistent": false,
+        "issue_id": "-0x6ca12d34aa707ae5"
+      }
+    ]
+  }
+}

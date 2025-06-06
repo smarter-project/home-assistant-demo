@@ -1,0 +1,270 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "path": "default_view",
+          "title": "Home",
+          "cards": [
+            {
+              "type": "alarm-panel",
+              "states": [
+                "arm_home",
+                "arm_away"
+              ],
+              "entity": "alarm_control_panel.ha_alarm"
+            },
+            {
+              "type": "horizontal-stack",
+              "cards": [
+                {
+                  "camera_view": "auto",
+                  "fit_mode": "cover",
+                  "type": "picture-glance",
+                  "title": "Kitchen",
+                  "image": "https://demo.home-assistant.io/stub_config/kitchen.png",
+                  "entities": [],
+                  "camera_image": "camera.front_door_camera"
+                },
+                {
+                  "camera_view": "auto",
+                  "fit_mode": "cover",
+                  "type": "picture-glance",
+                  "title": "Living Room 1",
+                  "image": "https://demo.home-assistant.io/stub_config/kitchen.png",
+                  "entities": [],
+                  "camera_image": "camera.living_room_1"
+                },
+                {
+                  "camera_view": "auto",
+                  "fit_mode": "cover",
+                  "type": "picture-glance",
+                  "title": "Living Room 2",
+                  "image": "https://demo.home-assistant.io/stub_config/kitchen.png",
+                  "entities": [],
+                  "camera_image": "camera.living_room_2"
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "light.kitchen_light_kitchen_light",
+                  "name": "Light"
+                },
+                {
+                  "entity": "sensor.kitchen_sensor_bedroom_1_temperature",
+                  "name": " Temperature"
+                },
+                {
+                  "entity": "binary_sensor.kitchen_kitchen_window",
+                  "name": " Window"
+                },
+                "binary_sensor.back_door_sensor_back_door",
+                {
+                  "entity": "binary_sensor.kitchen_kitchen_motion",
+                  "name": "Motion"
+                },
+                {
+                  "entity": "binary_sensor.kitchen_presence",
+                  "name": "Presence"
+                }
+              ],
+              "title": "Kitchen"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "light.bathroom_light_bathroom_light",
+                  "name": "Light"
+                },
+                {
+                  "entity": "binary_sensor.bathroom_bathroom_motion",
+                  "name": " Motion"
+                },
+                {
+                  "entity": "binary_sensor.bathroom_presence",
+                  "name": " Presence"
+                },
+                {
+                  "entity": "sensor.bathroom_sensor_bathroom_temperature",
+                  "name": " Temperature"
+                },
+                {
+                  "entity": "binary_sensor.bathroom_bathroom_window",
+                  "name": " Window"
+                }
+              ],
+              "title": "Bathroom"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "light.bedroom_1_light_bedroom_1_light",
+                  "name": "Light"
+                },
+                {
+                  "entity": "binary_sensor.bedroom_1_bedroom_1_motion",
+                  "name": " Motion"
+                },
+                {
+                  "entity": "binary_sensor.bedroom_1_presence",
+                  "name": " Presence"
+                },
+                {
+                  "entity": "sensor.bedroom_1_sensor_bedroom_1_temperature",
+                  "name": " Temperature"
+                },
+                {
+                  "entity": "binary_sensor.bedroom_1_bedroom_1_window",
+                  "name": " Window"
+                }
+              ],
+              "title": "Bedroom 1"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "light.bedroom_2_light_bedroom_2_light",
+                  "name": "Light"
+                },
+                {
+                  "entity": "binary_sensor.bedroom_2_bedroom_2_motion",
+                  "name": " Motion"
+                },
+                {
+                  "entity": "binary_sensor.bedroom_2_presence",
+                  "name": " Presence"
+                },
+                {
+                  "entity": "sensor.bedroom_2_sensor_bedroom_1_temperature",
+                  "name": " Temperature"
+                },
+                {
+                  "entity": "binary_sensor.bedroom_2_bedroom_2_window",
+                  "name": " Window"
+                }
+              ],
+              "title": "Bedroom 2"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "light.garage_light_garage_light",
+                  "name": "Light"
+                },
+                {
+                  "entity": "binary_sensor.garage_garage_motion",
+                  "name": " Motion"
+                },
+                {
+                  "entity": "binary_sensor.garage_presence",
+                  "name": " Presence"
+                },
+                {
+                  "entity": "sensor.garage_sensor_garage_temperature",
+                  "name": " Temperature"
+                },
+                {
+                  "entity": "binary_sensor.garage_door_sensor_garage_door",
+                  "name": "Door"
+                }
+              ],
+              "title": "Garage"
+            },
+            {
+              "type": "entities",
+              "entities": [
+                {
+                  "entity": "light.garden_light",
+                  "name": "Light"
+                },
+                {
+                  "entity": "binary_sensor.garden_garden_motion",
+                  "name": "  Motion"
+                },
+                {
+                  "entity": "binary_sensor.garden_presence",
+                  "name": "  Presence"
+                }
+              ],
+              "title": "Garden"
+            },
+            {
+              "type": "grid",
+              "square": false,
+              "columns": 1,
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "light.hallway_light_hallway_light",
+                      "name": "Light"
+                    },
+                    {
+                      "entity": "siren.siren_siren",
+                      "name": "Siren"
+                    },
+                    {
+                      "entity": "binary_sensor.hallway_motion",
+                      "name": " Motion"
+                    },
+                    {
+                      "entity": "sensor.hallway_sensor_hallway_temperature",
+                      "name": " Temperature"
+                    },
+                    "binary_sensor.front_door_sensor_front_door"
+                  ],
+                  "title": "Hallway"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "square": false,
+              "columns": 1,
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "light.living_room_living_room_light",
+                      "name": "Light"
+                    },
+                    {
+                      "entity": "binary_sensor.living_room_living_room_motion",
+                      "name": " Motion"
+                    },
+                    {
+                      "entity": "binary_sensor.living_room_presence",
+                      "name": " Presence"
+                    },
+                    {
+                      "entity": "sensor.living_room_sensor_living_room_temperature",
+                      "name": " Temperature"
+                    },
+                    {
+                      "entity": "binary_sensor.living_room_livingroomwindow",
+                      "name": " Window"
+                    }
+                  ],
+                  "title": "Living Room"
+                }
+              ]
+            }
+          ],
+          "badges": []
+        }
+      ]
+    }
+  }
+}

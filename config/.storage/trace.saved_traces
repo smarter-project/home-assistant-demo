@@ -1,0 +1,1059 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "trace.saved_traces",
+  "data": {
+    "automation.1748955940402": [
+      {
+        "extended_dict": {
+          "last_step": "condition/0/entity_id/0",
+          "run_id": "c77326b7a2de847b66fc5b73d6f2b8f7",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2025-06-06T10:38:38.837420+00:00",
+            "finish": "2025-06-06T10:38:38.837701+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1748955940402",
+          "trigger": "state of binary_sensor.motion",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-06-06T10:38:38.837455+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.test1",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1748955940402",
+                      "last_triggered": "2025-06-04T15:31:08.791675+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "test1"
+                    },
+                    "last_changed": "2025-06-06T10:16:06.432767+00:00",
+                    "last_reported": "2025-06-06T10:16:06.432767+00:00",
+                    "last_updated": "2025-06-06T10:16:06.432767+00:00",
+                    "context": {
+                      "id": "01JX2BV71062B15SVPR7KMRZWZ",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "binary_sensor.motion",
+                    "from_state": {
+                      "entity_id": "binary_sensor.motion",
+                      "state": "off",
+                      "attributes": {
+                        "entity_id": [
+                          "binary_sensor.bathroom_bathroom_motion",
+                          "binary_sensor.bedroom_1_bedroom_1_motion",
+                          "binary_sensor.bedroom_2_bedroom_2_motion",
+                          "binary_sensor.garage_garage_motion",
+                          "binary_sensor.garden_garden_motion",
+                          "binary_sensor.hallway_motion",
+                          "binary_sensor.kitchen_kitchen_motion",
+                          "binary_sensor.living_room_living_room_motion"
+                        ],
+                        "friendly_name": "group.motion"
+                      },
+                      "last_changed": "2025-06-06T10:38:36.054446+00:00",
+                      "last_reported": "2025-06-06T10:38:36.054446+00:00",
+                      "last_updated": "2025-06-06T10:38:36.054446+00:00",
+                      "context": {
+                        "id": "01JX2D4D0P9QR9DM9P90JZ4R6W",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "binary_sensor.motion",
+                      "state": "on",
+                      "attributes": {
+                        "entity_id": [
+                          "binary_sensor.bathroom_bathroom_motion",
+                          "binary_sensor.bedroom_1_bedroom_1_motion",
+                          "binary_sensor.bedroom_2_bedroom_2_motion",
+                          "binary_sensor.garage_garage_motion",
+                          "binary_sensor.garden_garden_motion",
+                          "binary_sensor.hallway_motion",
+                          "binary_sensor.kitchen_kitchen_motion",
+                          "binary_sensor.living_room_living_room_motion"
+                        ],
+                        "friendly_name": "group.motion"
+                      },
+                      "last_changed": "2025-06-06T10:38:38.837292+00:00",
+                      "last_reported": "2025-06-06T10:38:40.329671+00:00",
+                      "last_updated": "2025-06-06T10:38:38.837292+00:00",
+                      "context": {
+                        "id": "01JX2D4FQM6P23X59RP8KRXXQG",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of binary_sensor.motion"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2025-06-06T10:38:38.837477+00:00",
+                "error": "In 'state':\n  In 'state' condition: unknown entity alarm_control_panel.home_alarm_2"
+              }
+            ],
+            "condition/0/entity_id/0": [
+              {
+                "path": "condition/0/entity_id/0",
+                "timestamp": "2025-06-06T10:38:38.837490+00:00",
+                "error": "In 'state' condition: unknown entity alarm_control_panel.home_alarm_2"
+              }
+            ]
+          },
+          "config": {
+            "id": "1748955940402",
+            "alias": "test1",
+            "description": "",
+            "triggers": [
+              {
+                "trigger": "state",
+                "entity_id": [
+                  "binary_sensor.motion"
+                ],
+                "to": "on"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "state",
+                "entity_id": "alarm_control_panel.home_alarm_2",
+                "state": "armed_away"
+              }
+            ],
+            "actions": [
+              {
+                "action": "persistent_notification.create",
+                "metadata": {},
+                "data": {
+                  "message": "Alarm Triggered"
+                }
+              },
+              {
+                "action": "alarm_control_panel.alarm_trigger",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "alarm_control_panel.home_alarm_2"
+                }
+              },
+              {
+                "delay": {
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 10,
+                  "milliseconds": 0
+                }
+              },
+              {
+                "action": "siren.turn_on",
+                "metadata": {},
+                "data": {
+                  "duration": "10"
+                },
+                "target": {
+                  "entity_id": "siren.siren_siren"
+                }
+              },
+              {
+                "delay": {
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 20,
+                  "milliseconds": 0
+                }
+              },
+              {
+                "action": "siren.turn_off",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "siren.siren_siren"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01JX2D4FQNNTATC1WR8Q5XASAC",
+            "parent_id": "01JX2D4FQM6P23X59RP8KRXXQG",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/0/entity_id/0",
+          "run_id": "c77326b7a2de847b66fc5b73d6f2b8f7",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2025-06-06T10:38:38.837420+00:00",
+            "finish": "2025-06-06T10:38:38.837701+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1748955940402",
+          "trigger": "state of binary_sensor.motion"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "condition/0/entity_id/0",
+          "run_id": "7e9de7ff3dcfcce78eb46c6ffa54857d",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2025-06-06T10:38:41.865355+00:00",
+            "finish": "2025-06-06T10:38:41.865970+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1748955940402",
+          "trigger": "state of binary_sensor.motion",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-06-06T10:38:41.865525+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.test1",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1748955940402",
+                      "last_triggered": "2025-06-04T15:31:08.791675+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "test1"
+                    },
+                    "last_changed": "2025-06-06T10:16:06.432767+00:00",
+                    "last_reported": "2025-06-06T10:16:06.432767+00:00",
+                    "last_updated": "2025-06-06T10:16:06.432767+00:00",
+                    "context": {
+                      "id": "01JX2BV71062B15SVPR7KMRZWZ",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "binary_sensor.motion",
+                    "from_state": {
+                      "entity_id": "binary_sensor.motion",
+                      "state": "off",
+                      "attributes": {
+                        "entity_id": [
+                          "binary_sensor.bathroom_bathroom_motion",
+                          "binary_sensor.bedroom_1_bedroom_1_motion",
+                          "binary_sensor.bedroom_2_bedroom_2_motion",
+                          "binary_sensor.garage_garage_motion",
+                          "binary_sensor.garden_garden_motion",
+                          "binary_sensor.hallway_motion",
+                          "binary_sensor.kitchen_kitchen_motion",
+                          "binary_sensor.living_room_living_room_motion"
+                        ],
+                        "friendly_name": "group.motion"
+                      },
+                      "last_changed": "2025-06-06T10:38:41.801165+00:00",
+                      "last_reported": "2025-06-06T10:38:41.801165+00:00",
+                      "last_updated": "2025-06-06T10:38:41.801165+00:00",
+                      "context": {
+                        "id": "01JX2D4JM8D56BYXY4EQB797HA",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "binary_sensor.motion",
+                      "state": "on",
+                      "attributes": {
+                        "entity_id": [
+                          "binary_sensor.bathroom_bathroom_motion",
+                          "binary_sensor.bedroom_1_bedroom_1_motion",
+                          "binary_sensor.bedroom_2_bedroom_2_motion",
+                          "binary_sensor.garage_garage_motion",
+                          "binary_sensor.garden_garden_motion",
+                          "binary_sensor.hallway_motion",
+                          "binary_sensor.kitchen_kitchen_motion",
+                          "binary_sensor.living_room_living_room_motion"
+                        ],
+                        "friendly_name": "group.motion"
+                      },
+                      "last_changed": "2025-06-06T10:38:41.865138+00:00",
+                      "last_reported": "2025-06-06T10:39:12.452245+00:00",
+                      "last_updated": "2025-06-06T10:38:41.865138+00:00",
+                      "context": {
+                        "id": "01JX2D4JP8AYQSVJR6H198RBR7",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of binary_sensor.motion"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2025-06-06T10:38:41.865567+00:00",
+                "error": "In 'state':\n  In 'state' condition: unknown entity alarm_control_panel.home_alarm_2"
+              }
+            ],
+            "condition/0/entity_id/0": [
+              {
+                "path": "condition/0/entity_id/0",
+                "timestamp": "2025-06-06T10:38:41.865586+00:00",
+                "error": "In 'state' condition: unknown entity alarm_control_panel.home_alarm_2"
+              }
+            ]
+          },
+          "config": {
+            "id": "1748955940402",
+            "alias": "test1",
+            "description": "",
+            "triggers": [
+              {
+                "trigger": "state",
+                "entity_id": [
+                  "binary_sensor.motion"
+                ],
+                "to": "on"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "state",
+                "entity_id": "alarm_control_panel.home_alarm_2",
+                "state": "armed_away"
+              }
+            ],
+            "actions": [
+              {
+                "action": "persistent_notification.create",
+                "metadata": {},
+                "data": {
+                  "message": "Alarm Triggered"
+                }
+              },
+              {
+                "action": "alarm_control_panel.alarm_trigger",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "alarm_control_panel.home_alarm_2"
+                }
+              },
+              {
+                "delay": {
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 10,
+                  "milliseconds": 0
+                }
+              },
+              {
+                "action": "siren.turn_on",
+                "metadata": {},
+                "data": {
+                  "duration": "10"
+                },
+                "target": {
+                  "entity_id": "siren.siren_siren"
+                }
+              },
+              {
+                "delay": {
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 20,
+                  "milliseconds": 0
+                }
+              },
+              {
+                "action": "siren.turn_off",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "siren.siren_siren"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01JX2D4JP9PA2WA87H8XQG8CC9",
+            "parent_id": "01JX2D4JP8AYQSVJR6H198RBR7",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/0/entity_id/0",
+          "run_id": "7e9de7ff3dcfcce78eb46c6ffa54857d",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2025-06-06T10:38:41.865355+00:00",
+            "finish": "2025-06-06T10:38:41.865970+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1748955940402",
+          "trigger": "state of binary_sensor.motion"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "condition/0/entity_id/0",
+          "run_id": "3fafab1eb54df67cfa05478aa95a218c",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2025-06-06T10:39:20.182850+00:00",
+            "finish": "2025-06-06T10:39:20.182992+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1748955940402",
+          "trigger": "state of binary_sensor.motion",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-06-06T10:39:20.182877+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.test1",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1748955940402",
+                      "last_triggered": "2025-06-04T15:31:08.791675+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "test1"
+                    },
+                    "last_changed": "2025-06-06T10:16:06.432767+00:00",
+                    "last_reported": "2025-06-06T10:16:06.432767+00:00",
+                    "last_updated": "2025-06-06T10:16:06.432767+00:00",
+                    "context": {
+                      "id": "01JX2BV71062B15SVPR7KMRZWZ",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "binary_sensor.motion",
+                    "from_state": {
+                      "entity_id": "binary_sensor.motion",
+                      "state": "off",
+                      "attributes": {
+                        "entity_id": [
+                          "binary_sensor.bathroom_bathroom_motion",
+                          "binary_sensor.bedroom_1_bedroom_1_motion",
+                          "binary_sensor.bedroom_2_bedroom_2_motion",
+                          "binary_sensor.garage_garage_motion",
+                          "binary_sensor.garden_garden_motion",
+                          "binary_sensor.hallway_motion",
+                          "binary_sensor.kitchen_kitchen_motion",
+                          "binary_sensor.living_room_living_room_motion"
+                        ],
+                        "friendly_name": "group.motion"
+                      },
+                      "last_changed": "2025-06-06T10:39:13.735205+00:00",
+                      "last_reported": "2025-06-06T10:39:13.735205+00:00",
+                      "last_updated": "2025-06-06T10:39:13.735205+00:00",
+                      "context": {
+                        "id": "01JX2D5HT6XGA35FK1J9WN7N9M",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "binary_sensor.motion",
+                      "state": "on",
+                      "attributes": {
+                        "entity_id": [
+                          "binary_sensor.bathroom_bathroom_motion",
+                          "binary_sensor.bedroom_1_bedroom_1_motion",
+                          "binary_sensor.bedroom_2_bedroom_2_motion",
+                          "binary_sensor.garage_garage_motion",
+                          "binary_sensor.garden_garden_motion",
+                          "binary_sensor.hallway_motion",
+                          "binary_sensor.kitchen_kitchen_motion",
+                          "binary_sensor.living_room_living_room_motion"
+                        ],
+                        "friendly_name": "group.motion"
+                      },
+                      "last_changed": "2025-06-06T10:39:20.182791+00:00",
+                      "last_reported": "2025-06-06T10:39:20.182791+00:00",
+                      "last_updated": "2025-06-06T10:39:20.182791+00:00",
+                      "context": {
+                        "id": "01JX2D5R3PKN46G202G704RQD0",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of binary_sensor.motion"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2025-06-06T10:39:20.182887+00:00",
+                "error": "In 'state':\n  In 'state' condition: unknown entity alarm_control_panel.home_alarm_2"
+              }
+            ],
+            "condition/0/entity_id/0": [
+              {
+                "path": "condition/0/entity_id/0",
+                "timestamp": "2025-06-06T10:39:20.182893+00:00",
+                "error": "In 'state' condition: unknown entity alarm_control_panel.home_alarm_2"
+              }
+            ]
+          },
+          "config": {
+            "id": "1748955940402",
+            "alias": "test1",
+            "description": "",
+            "triggers": [
+              {
+                "trigger": "state",
+                "entity_id": [
+                  "binary_sensor.motion"
+                ],
+                "to": "on"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "state",
+                "entity_id": "alarm_control_panel.home_alarm_2",
+                "state": "armed_away"
+              }
+            ],
+            "actions": [
+              {
+                "action": "persistent_notification.create",
+                "metadata": {},
+                "data": {
+                  "message": "Alarm Triggered"
+                }
+              },
+              {
+                "action": "alarm_control_panel.alarm_trigger",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "alarm_control_panel.home_alarm_2"
+                }
+              },
+              {
+                "delay": {
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 10,
+                  "milliseconds": 0
+                }
+              },
+              {
+                "action": "siren.turn_on",
+                "metadata": {},
+                "data": {
+                  "duration": "10"
+                },
+                "target": {
+                  "entity_id": "siren.siren_siren"
+                }
+              },
+              {
+                "delay": {
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 20,
+                  "milliseconds": 0
+                }
+              },
+              {
+                "action": "siren.turn_off",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "siren.siren_siren"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01JX2D5R3PDF98N966860NXXXP",
+            "parent_id": "01JX2D5R3PKN46G202G704RQD0",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/0/entity_id/0",
+          "run_id": "3fafab1eb54df67cfa05478aa95a218c",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2025-06-06T10:39:20.182850+00:00",
+            "finish": "2025-06-06T10:39:20.182992+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1748955940402",
+          "trigger": "state of binary_sensor.motion"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "condition/0/entity_id/0",
+          "run_id": "eaa40039685db923a930a36d02744a1e",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2025-06-06T10:40:18.567427+00:00",
+            "finish": "2025-06-06T10:40:18.567805+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1748955940402",
+          "trigger": "state of binary_sensor.motion",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-06-06T10:40:18.567492+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.test1",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1748955940402",
+                      "last_triggered": "2025-06-04T15:31:08.791675+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "test1"
+                    },
+                    "last_changed": "2025-06-06T10:16:06.432767+00:00",
+                    "last_reported": "2025-06-06T10:16:06.432767+00:00",
+                    "last_updated": "2025-06-06T10:16:06.432767+00:00",
+                    "context": {
+                      "id": "01JX2BV71062B15SVPR7KMRZWZ",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "binary_sensor.motion",
+                    "from_state": {
+                      "entity_id": "binary_sensor.motion",
+                      "state": "off",
+                      "attributes": {
+                        "entity_id": [
+                          "binary_sensor.bathroom_bathroom_motion",
+                          "binary_sensor.bedroom_1_bedroom_1_motion",
+                          "binary_sensor.bedroom_2_bedroom_2_motion",
+                          "binary_sensor.garage_garage_motion",
+                          "binary_sensor.garden_garden_motion",
+                          "binary_sensor.hallway_motion",
+                          "binary_sensor.kitchen_kitchen_motion",
+                          "binary_sensor.living_room_living_room_motion"
+                        ],
+                        "friendly_name": "group.motion"
+                      },
+                      "last_changed": "2025-06-06T10:39:21.528136+00:00",
+                      "last_reported": "2025-06-06T10:39:21.528136+00:00",
+                      "last_updated": "2025-06-06T10:39:21.528136+00:00",
+                      "context": {
+                        "id": "01JX2D5SDQMB0ENER0XKYS93PE",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "binary_sensor.motion",
+                      "state": "on",
+                      "attributes": {
+                        "entity_id": [
+                          "binary_sensor.bathroom_bathroom_motion",
+                          "binary_sensor.bedroom_1_bedroom_1_motion",
+                          "binary_sensor.bedroom_2_bedroom_2_motion",
+                          "binary_sensor.garage_garage_motion",
+                          "binary_sensor.garden_garden_motion",
+                          "binary_sensor.hallway_motion",
+                          "binary_sensor.kitchen_kitchen_motion",
+                          "binary_sensor.living_room_living_room_motion"
+                        ],
+                        "friendly_name": "group.motion"
+                      },
+                      "last_changed": "2025-06-06T10:40:18.567273+00:00",
+                      "last_reported": "2025-06-06T10:40:18.567273+00:00",
+                      "last_updated": "2025-06-06T10:40:18.567273+00:00",
+                      "context": {
+                        "id": "01JX2D7H4640QQ8QZ1D4H36FF3",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of binary_sensor.motion"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2025-06-06T10:40:18.567520+00:00",
+                "error": "In 'state':\n  In 'state' condition: unknown entity alarm_control_panel.home_alarm_2"
+              }
+            ],
+            "condition/0/entity_id/0": [
+              {
+                "path": "condition/0/entity_id/0",
+                "timestamp": "2025-06-06T10:40:18.567534+00:00",
+                "error": "In 'state' condition: unknown entity alarm_control_panel.home_alarm_2"
+              }
+            ]
+          },
+          "config": {
+            "id": "1748955940402",
+            "alias": "test1",
+            "description": "",
+            "triggers": [
+              {
+                "trigger": "state",
+                "entity_id": [
+                  "binary_sensor.motion"
+                ],
+                "to": "on"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "state",
+                "entity_id": "alarm_control_panel.home_alarm_2",
+                "state": "armed_away"
+              }
+            ],
+            "actions": [
+              {
+                "action": "persistent_notification.create",
+                "metadata": {},
+                "data": {
+                  "message": "Alarm Triggered"
+                }
+              },
+              {
+                "action": "alarm_control_panel.alarm_trigger",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "alarm_control_panel.home_alarm_2"
+                }
+              },
+              {
+                "delay": {
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 10,
+                  "milliseconds": 0
+                }
+              },
+              {
+                "action": "siren.turn_on",
+                "metadata": {},
+                "data": {
+                  "duration": "10"
+                },
+                "target": {
+                  "entity_id": "siren.siren_siren"
+                }
+              },
+              {
+                "delay": {
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 20,
+                  "milliseconds": 0
+                }
+              },
+              {
+                "action": "siren.turn_off",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "siren.siren_siren"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01JX2D7H475PWGK9VP47HVM8BD",
+            "parent_id": "01JX2D7H4640QQ8QZ1D4H36FF3",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/0/entity_id/0",
+          "run_id": "eaa40039685db923a930a36d02744a1e",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2025-06-06T10:40:18.567427+00:00",
+            "finish": "2025-06-06T10:40:18.567805+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1748955940402",
+          "trigger": "state of binary_sensor.motion"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "condition/0/entity_id/0",
+          "run_id": "e5f54f02eaf06046f148aca10aa35c4c",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2025-06-06T10:40:21.961859+00:00",
+            "finish": "2025-06-06T10:40:21.962416+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1748955940402",
+          "trigger": "state of binary_sensor.motion",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-06-06T10:40:21.961926+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.test1",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1748955940402",
+                      "last_triggered": "2025-06-04T15:31:08.791675+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "test1"
+                    },
+                    "last_changed": "2025-06-06T10:16:06.432767+00:00",
+                    "last_reported": "2025-06-06T10:16:06.432767+00:00",
+                    "last_updated": "2025-06-06T10:16:06.432767+00:00",
+                    "context": {
+                      "id": "01JX2BV71062B15SVPR7KMRZWZ",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "binary_sensor.motion",
+                    "from_state": {
+                      "entity_id": "binary_sensor.motion",
+                      "state": "off",
+                      "attributes": {
+                        "entity_id": [
+                          "binary_sensor.bathroom_bathroom_motion",
+                          "binary_sensor.bedroom_1_bedroom_1_motion",
+                          "binary_sensor.bedroom_2_bedroom_2_motion",
+                          "binary_sensor.garage_garage_motion",
+                          "binary_sensor.garden_garden_motion",
+                          "binary_sensor.hallway_motion",
+                          "binary_sensor.kitchen_kitchen_motion",
+                          "binary_sensor.living_room_living_room_motion"
+                        ],
+                        "friendly_name": "group.motion"
+                      },
+                      "last_changed": "2025-06-06T10:40:19.686274+00:00",
+                      "last_reported": "2025-06-06T10:40:19.686274+00:00",
+                      "last_updated": "2025-06-06T10:40:19.686274+00:00",
+                      "context": {
+                        "id": "01JX2D7J75AP085F7Z48GE94B7",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "binary_sensor.motion",
+                      "state": "on",
+                      "attributes": {
+                        "entity_id": [
+                          "binary_sensor.bathroom_bathroom_motion",
+                          "binary_sensor.bedroom_1_bedroom_1_motion",
+                          "binary_sensor.bedroom_2_bedroom_2_motion",
+                          "binary_sensor.garage_garage_motion",
+                          "binary_sensor.garden_garden_motion",
+                          "binary_sensor.hallway_motion",
+                          "binary_sensor.kitchen_kitchen_motion",
+                          "binary_sensor.living_room_living_room_motion"
+                        ],
+                        "friendly_name": "group.motion"
+                      },
+                      "last_changed": "2025-06-06T10:40:21.961569+00:00",
+                      "last_reported": "2025-06-06T10:40:21.961569+00:00",
+                      "last_updated": "2025-06-06T10:40:21.961569+00:00",
+                      "context": {
+                        "id": "01JX2D7ME98B48WT3Q6QBWDGHT",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of binary_sensor.motion"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2025-06-06T10:40:21.961972+00:00",
+                "error": "In 'state':\n  In 'state' condition: unknown entity alarm_control_panel.home_alarm_2"
+              }
+            ],
+            "condition/0/entity_id/0": [
+              {
+                "path": "condition/0/entity_id/0",
+                "timestamp": "2025-06-06T10:40:21.961997+00:00",
+                "error": "In 'state' condition: unknown entity alarm_control_panel.home_alarm_2"
+              }
+            ]
+          },
+          "config": {
+            "id": "1748955940402",
+            "alias": "test1",
+            "description": "",
+            "triggers": [
+              {
+                "trigger": "state",
+                "entity_id": [
+                  "binary_sensor.motion"
+                ],
+                "to": "on"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "state",
+                "entity_id": "alarm_control_panel.home_alarm_2",
+                "state": "armed_away"
+              }
+            ],
+            "actions": [
+              {
+                "action": "persistent_notification.create",
+                "metadata": {},
+                "data": {
+                  "message": "Alarm Triggered"
+                }
+              },
+              {
+                "action": "alarm_control_panel.alarm_trigger",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "alarm_control_panel.home_alarm_2"
+                }
+              },
+              {
+                "delay": {
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 10,
+                  "milliseconds": 0
+                }
+              },
+              {
+                "action": "siren.turn_on",
+                "metadata": {},
+                "data": {
+                  "duration": "10"
+                },
+                "target": {
+                  "entity_id": "siren.siren_siren"
+                }
+              },
+              {
+                "delay": {
+                  "hours": 0,
+                  "minutes": 0,
+                  "seconds": 20,
+                  "milliseconds": 0
+                }
+              },
+              {
+                "action": "siren.turn_off",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "siren.siren_siren"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01JX2D7ME9NRJR94A48EFCTHCK",
+            "parent_id": "01JX2D7ME98B48WT3Q6QBWDGHT",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/0/entity_id/0",
+          "run_id": "e5f54f02eaf06046f148aca10aa35c4c",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2025-06-06T10:40:21.961859+00:00",
+            "finish": "2025-06-06T10:40:21.962416+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1748955940402",
+          "trigger": "state of binary_sensor.motion"
+        }
+      }
+    ]
+  }
+}

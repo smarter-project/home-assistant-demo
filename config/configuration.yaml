@@ -1,0 +1,65 @@
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+# Example configuration.yaml entry
+mqtt:
+  - camera:
+      topic: home/hallway/front_door_camera
+      name: Front Door 
+      unique_id: front_door_camera
+      
+  - camera:
+      topic: home/livingroom/camera1
+      name: Living Room 1
+      unique_id: livingroom_camera1
+   
+  - camera:
+      topic: home/livingroom/camera2
+      name: Living Room 2
+      unique_id: livingroom_camera2
+          
+alarm_control_panel:
+  - platform: manual_mqtt
+    state_topic: home/alarm
+    command_topic: home/alarm/set
+    code_arm_required: false
+    disarm_after_trigger: false
+    code: "1234"
+    pending_time: 10
+    delay_time: 10
+    trigger_time: 20
+    disarmed:
+      trigger_time: 0
+    armed_home:
+      pending_time: 0
+      delay_time: 0
+    
+
+      
+      
+      
+      
+#alarm_control_panel:
+#  - platform: manual
+#    name: Home Alarm
+#    unique_id: alarm_1
+#    code_arm_required: false
+#    disarm_after_trigger: false
+#    code: "1234"
+#    arming_time: 10
+#    delay_time: 5
+#    trigger_time: 20
+#    disarmed:
+#      trigger_time: 0
+#    arming_states:
+#      - armed_away
+#      - armed_home
+    
