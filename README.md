@@ -6,14 +6,21 @@ This README provides instructions on how to build and deploy a ready-to-use inst
 
 The configuration of HA includes a number of areas and sensors. Most of the sensors are discovered using the MQTT discovery mode.
 
-When everything is up and running the home-assistant api is available on http://localhost:8123/api.
+When everything is up and running the home-assistant web-gui is available at:  
 
-The web-gui is available at:  http://localhost:8123
+http://localhost:8123
 
-The only user provided is: vm-user (password is vm-user)
+The api is available at:
+
+http://localhost:8123/api.
+
+To login via the GUI use these credentials:
+Name: vm-user
+Password: vm-user)
 
 The instance includes an MQTT broker reachable using:
-```port: 1883
+```
+  port: 1883
   user: mqtt-user
   password: mqtt-user    
 ```
