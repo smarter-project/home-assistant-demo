@@ -3,7 +3,7 @@
 
 while true; do
 
-status=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8123/api/)
+status=$(curl -s -o /dev/null -w "%{http_code}" http://homeassistant:8123/api/)
 
 if [ "$status" = "200" ] || [ "$status" = "401" ]; then
     echo "Home Assistant is up"
@@ -12,7 +12,7 @@ else
   echo "Home Assistant is down"
 fi
 
-sleep 5
+sleep 20
 
 done
 

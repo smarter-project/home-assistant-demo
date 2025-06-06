@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 
 # MQTT credentials and settings
-BROKER="localhost"
+BROKER="mosquitto"
 PORT="1883"
 USERNAME="mqtt-user"
 PASSWORD="mqtt-user"
@@ -33,7 +33,7 @@ else:
 for key in data.config_topic.keys():
     if key in data.config_msg:
         print("Adding: ", key)
-        subprocess.run(["mosquitto_pub", "-h", BROKER, "-u",  USERNAME, "-P", PASSWORD, "-t", data.config_topic[key], "-m", data.config_msg[key]])
+        subprocess.run(["mosquitto_pub", "-h", BROKER, "-p", PORT, "-u",  USERNAME, "-P", PASSWORD, "-t", data.config_topic[key], "-m", data.config_msg[key]])
     else:
         print("No config for: ", key)
 
@@ -44,9 +44,9 @@ for key in data.config_topic.keys():
         s = data.default_state[key]
         print("setting default state of ",key, " to ", s)
         if s[:5] == "File:":
-            subprocess.run(["mosquitto_pub", "-h", BROKER, "-u",  USERNAME, "-P", PASSWORD, "-t", data.state_topic[key], "-f", media_suffix+s[6:]])
+            subprocess.run(["mosquitto_pub", "-h", BROKER, "-p", PORT, "-u",  USERNAME, "-P", PASSWORD, "-t", data.state_topic[key], "-f", media_suffix+s[6:]])
         else:
-            subprocess.run(["mosquitto_pub", "-h", BROKER, "-u",  USERNAME, "-P", PASSWORD, "-r", "-t", data.state_topic[key], "-m", data.default_state[key]])
+            subprocess.run(["mosquitto_pub", "-h", BROKER, "-p", PORT, "-u",  USERNAME, "-P", PASSWORD, "-r", "-t", data.state_topic[key], "-m", data.default_state[key]])
     else:
         print("no default state")
         

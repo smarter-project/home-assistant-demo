@@ -7,7 +7,7 @@ import re
 import argparse
 
 # MQTT credentials and settings
-BROKER="localhost"
+BROKER="mosquitto"
 PORT="1883"
 USERNAME="mqtt-user"
 PASSWORD="mqtt-user"
