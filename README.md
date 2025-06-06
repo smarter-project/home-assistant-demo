@@ -45,6 +45,9 @@ This version uses docker-compose to deploy the containers:
 
 `docker-compose up -d`
 
+On macos docker must be confiured to allow host-networking: 
+In docker desktop goto: Settings->Resources->Network and enable host networking
+
 Once all the containers are running, the web GUI should be available and you should be able to log into Home Assistant
 
 This deployment uses volumes and so the configuration is persistent between invocations of docker-compose. 
