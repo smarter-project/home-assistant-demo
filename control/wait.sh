@@ -12,7 +12,7 @@ else
   echo "Home Assistant is down"
 fi
 
-sleep 5
+sleep 20
 
 done
 
