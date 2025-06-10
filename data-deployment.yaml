@@ -24,7 +24,7 @@ spec:
     spec:
       initContainers:
         - name: init
-          image: ha_data_k8s:1.0
+          image: ghcr.io/smarter-project/ha_data_k8s:1.0
           command: ["sh", "-c", "cp -r /data/config  /shared && cp -r /mosquitto /shared && touch /shared/ready.txt"]
           volumeMounts:
              - name: ha-config
@@ -33,7 +33,7 @@ spec:
                mountPath: /shared/mosquitto
 
       containers:
-        - image: ha_data:1.0
+        - image: ghcr.io/smarter-project/ha_data_k8s:1.0
           name: data
           volumeMounts:
              - name: ha-config
