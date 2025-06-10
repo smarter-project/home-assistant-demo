@@ -24,7 +24,7 @@
                   "camera_view": "auto",
                   "fit_mode": "cover",
                   "type": "picture-glance",
-                  "title": "Kitchen",
+                  "title": "Front Door",
                   "image": "https://demo.home-assistant.io/stub_config/kitchen.png",
                   "entities": [],
                   "camera_image": "camera.front_door_camera"

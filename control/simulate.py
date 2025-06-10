@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import os
 import subprocess
 import time
 import json
@@ -7,8 +8,9 @@ import re
 import argparse
 
 # MQTT credentials and settings
-BROKER="mosquitto"
-PORT="1883"
+BROKER = os.getenv("MQTT_BROKER", "mosquitto")
+PORT =   os.getenv("MQTT_PORT", "1883")
+
 USERNAME="mqtt-user"
 PASSWORD="mqtt-user"
 

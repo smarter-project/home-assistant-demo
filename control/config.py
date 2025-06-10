@@ -1,14 +1,18 @@
 #!/usr/bin/python3
+import os
 import subprocess
 import time
 import json
 from pathlib import Path
 
 # MQTT credentials and settings
-BROKER="mosquitto"
-PORT="1883"
+BROKER = os.getenv("MQTT_BROKER", "mosquitto")
+PORT =   os.getenv("MQTT_PORT", "1883")
+
 USERNAME="mqtt-user"
 PASSWORD="mqtt-user"
+
+
 
 import data
 import lights
@@ -22,7 +26,7 @@ import presence
 import alarm
 
 
-if Path("/data/media").is_dir():
+if Path("/data/images").is_dir():
     media_suffix="/data/"
 else:
     media_suffix="./"    
@@ -44,7 +48,7 @@ for key in data.config_topic.keys():
         s = data.default_state[key]
         print("setting default state of ",key, " to ", s)
         if s[:5] == "File:":
-            subprocess.run(["mosquitto_pub", "-h", BROKER, "-p", PORT, "-u",  USERNAME, "-P", PASSWORD, "-t", data.state_topic[key], "-f", media_suffix+s[6:]])
+            subprocess.run(["mosquitto_pub", "-h", BROKER, "-p", PORT, "-u",  USERNAME, "-P", PASSWORD, "-t", data.state_topic[key], "-f", media_suffix+s[5:]])
         else:
             subprocess.run(["mosquitto_pub", "-h", BROKER, "-p", PORT, "-u",  USERNAME, "-P", PASSWORD, "-r", "-t", data.state_topic[key], "-m", data.default_state[key]])
     else:

@@ -23,8 +23,8 @@ print("State:", args.state)
 
 
 # MQTT credentials and settings
-BROKER = os.getenv("MQTT_BROKER", "mosquitto")
-PORT =   os.getenv("MQTT_PORT", "1883")
+BROKER = os.getenv("MQTT_BROKER", "localhost")
+PORT =   os.getenv("MQTT_PORT", "31883")
 
 USERNAME="mqtt-user"
 PASSWORD="mqtt-user"

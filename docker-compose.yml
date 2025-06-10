@@ -1,0 +1,43 @@
+services:
+  data:
+    container_name: data
+    image: ha_data:1.0
+    volumes:
+      - ha_config:/data/config
+      - ha_mosquitto:/mosquitto
+    depends_on:
+       - homeassistant
+    networks:
+       - backend
+
+  homeassistant:
+    container_name: homeassistant
+    image: ghcr.io/home-assistant/home-assistant:stable
+    volumes:
+      - ha_config:/config
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - Europe/London
+    ports:
+      - 8123:8123
+    networks:
+      - backend
+      
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: mosquitto
+    depends_on:
+       - data    
+    networks:
+      - backend
+    volumes:
+      - ha_mosquitto:/mosquitto
+    ports:
+      - 1883:1883
+    
+volumes:
+  ha_config:
+  ha_mosquitto:
+
+networks:
+  backend:
