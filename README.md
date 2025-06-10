@@ -8,48 +8,49 @@ The configuration of HA includes a number of areas and sensors. Most of the sens
 
 When everything is up and running the home-assistant web-gui is available at:  
 
-http://localhost:8123
-
-The api is available at:
-
-http://localhost:8123/api.
+http://localhost:30123
 
 To login via the GUI use these credentials:
 
 Name: vm-user
 Password: vm-user
 
+The api is available at:
+
+http://localhost:8123/api
+
+Use this long-lived API token for authentication:
+
+```API_ACCESS_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0OTA4YzBjZmRlMTg0ZjAyOTE4Zjg4ODdjMzBiNGI4OCIsImlhdCI6MTc0ODUyNzQ4MCwiZXhwIjoyMDYzODg3NDgwfQ.MmXRZ38vUlKNijfYaBEdR_A2MoX7NwY_88lBe1BddfA```
+
+
 The instance includes an MQTT broker reachable using:
 ```
-  port: 1883
+  port: 31883
   user: mqtt-user
   password: mqtt-user    
 ```
+
 The instance includes an MCP Server reachable using: 
 
 ```http://localhost:8123/mcp_server/sse```
 
-plus this long-lived API token for authentication:
-
-```API_ACCESS_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0OTA4YzBjZmRlMTg0ZjAyOTE4Zjg4ODdjMzBiNGI4OCIsImlhdCI6MTc0ODUyNzQ4MCwiZXhwIjoyMDYzODg3NDgwfQ.MmXRZ38vUlKNijfYaBEdR_A2MoX7NwY_88lBe1BddfA```
 
 ## Build
 
 Build the image that sets up the initial configuration of the instance:
 
-`docker build -t ha_data:1.0 .`
+`docker build -t ha_data_k8s:1.0 .`
 
 ## Deploy
 
-This version uses docker-compose to deploy the containers:
+This version uses kubernetes to deploy the containers. Two scripts are provided that contain the kubectl commands to deply the various services, volumes and deployements.
 
-`docker-compose up -d`
+`up`:  contains the kubectl commands to deploy the various services, volumes and deployements.
+`down: contains the kubectl commands to remove everything
+
 
 Once all the containers are running, the web GUI should be available and you should be able to log into Home Assistant
-
-This deployment uses volumes and so the configuration is persistent between invocations of docker-compose. 
-
-Remove the `ha_config` and `ha_mosquitto` docker volumes to start from initial state again.
 
 
 ## Simulate

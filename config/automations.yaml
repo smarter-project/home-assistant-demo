@@ -1,14 +1,15 @@
 - id: '1748955940402'
-  alias: test1
+  alias: Alarm_basic
   description: ''
   triggers:
   - trigger: state
     entity_id:
     - binary_sensor.motion
+    from: 'off'
     to: 'on'
   conditions:
   - condition: state
-    entity_id: alarm_control_panel.home_alarm_2
+    entity_id: alarm_control_panel.ha_alarm
     state: armed_away
   actions:
   - action: persistent_notification.create
@@ -19,12 +20,7 @@
     metadata: {}
     data: {}
     target:
-      entity_id: alarm_control_panel.home_alarm_2
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 10
-      milliseconds: 0
+      entity_id: alarm_control_panel.ha_alarm
   - action: siren.turn_on
     metadata: {}
     data:

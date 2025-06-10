@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yaml
+    kompose.version: 1.36.0 (HEAD)
+  labels:
+    io.kompose.service: homeassistant
+  name: homeassistant
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: homeassistant
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose.yaml
+        kompose.version: 1.36.0 (HEAD)
+      labels:
+        io.kompose.service: homeassistant
+    spec:
+      containers:
+        - image: ghcr.io/home-assistant/home-assistant:stable
+          name: homeassistant
+          ports:
+            - containerPort: 8123
+              protocol: TCP
+          volumeMounts:
+            - mountPath: /config
+              name: ha-config
+            - mountPath: /etc/localtime
+              name: homeassistant-cm1
+              readOnly: true
+              subPath: localtime
+      restartPolicy: Always
+      volumes:
+        - name: ha-config
+          persistentVolumeClaim:
+            claimName: ha-config
+        - configMap:
+            items:
+              - key: localtime
+                path: localtime
+            name: homeassistant-cm1
+          name: homeassistant-cm1

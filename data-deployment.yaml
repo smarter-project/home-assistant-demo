@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yaml
+    kompose.version: 1.36.0 (HEAD)
+  labels:
+    io.kompose.service: data
+  name: data
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: data
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose.yaml
+        kompose.version: 1.36.0 (HEAD)
+      labels:
+        io.kompose.service: data
+    spec:
+      initContainers:
+        - name: init
+          image: ha_data_k8s:1.0
+          command: ["sh", "-c", "cp -r /data/config  /shared && cp -r /mosquitto /shared && touch /shared/ready.txt"]
+          volumeMounts:
+             - name: ha-config
+               mountPath: /shared/config
+             - name: ha-mosquitto               
+               mountPath: /shared/mosquitto
+
+      containers:
+        - image: ha_data:1.0
+          name: data
+          volumeMounts:
+             - name: ha-config
+               mountPath: /shared/config
+             - name: ha-mosquitto
+               mountPath: /shared/mosquitto
+
+      volumes:
+          - name: ha-config
+            persistentVolumeClaim:
+             claimName: ha-config
+          - name: ha-mosquitto
+            persistentVolumeClaim:
+              claimName: ha-mosquitto
