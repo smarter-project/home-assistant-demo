@@ -22,6 +22,14 @@ spec:
       labels:
         io.kompose.service: homeassistant
     spec:
+      initContainers:
+        - name: init
+          image: alpine:latest
+          command: ["sh", "-c", "while [ ! -f /config/ready.txt ]; do sleep 1; done; echo ok"]
+          volumeMounts:
+             - name: ha-config               
+               mountPath: /config
+    
       containers:
         - image: ghcr.io/home-assistant/home-assistant:stable
           name: homeassistant

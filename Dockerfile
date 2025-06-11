@@ -3,7 +3,7 @@ FROM alpine
 RUN mkdir /data
 COPY ./mosquitto /mosquitto
 COPY ./config /data/config
-COPY ./media /data/media
+COPY ./images /data/images
 COPY ./control /data/control
 
 

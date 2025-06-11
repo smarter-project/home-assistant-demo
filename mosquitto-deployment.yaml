@@ -22,6 +22,14 @@ spec:
       labels:
         io.kompose.service: mosquitto
     spec:
+      initContainers:
+        - name: init
+          image: alpine:latest
+          command: ["sh", "-c", "while [ ! -f /mosquitto/ready.txt ]; do sleep 1; done; echo ok"]
+          volumeMounts:
+             - name: ha-mosquitto               
+               mountPath: /mosquitto
+    
       containers:
         - image: eclipse-mosquitto
           name: mosquitto

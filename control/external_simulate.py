@@ -110,6 +110,7 @@ while True:
                         state = "OFF"
                         
                     set_state(dd["state_topic"], state)
+                    set_state(dd["command_topic"], state)
 
             if args.motion or args.all:                    
                 # motion sensors
