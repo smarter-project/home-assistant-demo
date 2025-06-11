@@ -70,6 +70,16 @@ Two versions of the script are provided in the control directory: `simulate.py` 
 
 The scripts have the same functionality however `external_simulate.py` uses the external ports to communicate with Home Assistant and the MQTT Broker. `external_simulate.py` also requires the MQTT Broker mosquitto clients (mosquitto_pub and mosquitto_sub) to be installed locally. 
 
+Linux (Ubuntu):
+
+    sudo apt install mosquitto-clients
+
+macos:
+
+    brew install mosquitto-clients
+
+
+
 The `simulate.py` script is designed to be executed inside the deployed `data` container and uses the internal service names and ports.
 
 Environment variables MQTT_BROKER and MQTT_PORT can be used to override the default name and ports.
