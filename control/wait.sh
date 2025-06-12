@@ -24,9 +24,4 @@ SCRIPT_DIR=$(dirname "$0")
 
 $SCRIPT_DIR/config.py
 
-sleep 10
-
-$SCRIPT_DIR/change_lights.py
-
-
 tail -f /dev/null

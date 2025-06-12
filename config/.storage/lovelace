@@ -10,14 +10,6 @@
           "title": "Home",
           "cards": [
             {
-              "type": "alarm-panel",
-              "states": [
-                "arm_home",
-                "arm_away"
-              ],
-              "entity": "alarm_control_panel.ha_alarm"
-            },
-            {
               "type": "horizontal-stack",
               "cards": [
                 {
@@ -46,6 +38,47 @@
                   "image": "https://demo.home-assistant.io/stub_config/kitchen.png",
                   "entities": [],
                   "camera_image": "camera.living_room_2"
+                }
+              ]
+            },
+            {
+              "type": "alarm-panel",
+              "states": [
+                "arm_home",
+                "arm_away"
+              ],
+              "entity": "alarm_control_panel.ha_alarm"
+            },
+            {
+              "type": "grid",
+              "square": false,
+              "columns": 1,
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "light.living_room_living_room_light",
+                      "name": "Light"
+                    },
+                    {
+                      "entity": "binary_sensor.living_room_living_room_motion",
+                      "name": " Motion"
+                    },
+                    {
+                      "entity": "binary_sensor.living_room_presence",
+                      "name": " Presence"
+                    },
+                    {
+                      "entity": "sensor.living_room_sensor_living_room_temperature",
+                      "name": " Temperature"
+                    },
+                    {
+                      "entity": "binary_sensor.living_room_livingroomwindow",
+                      "name": " Window"
+                    }
+                  ],
+                  "title": "Living Room"
                 }
               ]
             },
@@ -225,39 +258,6 @@
                     "binary_sensor.front_door_sensor_front_door"
                   ],
                   "title": "Hallway"
-                }
-              ]
-            },
-            {
-              "type": "grid",
-              "square": false,
-              "columns": 1,
-              "cards": [
-                {
-                  "type": "entities",
-                  "entities": [
-                    {
-                      "entity": "light.living_room_living_room_light",
-                      "name": "Light"
-                    },
-                    {
-                      "entity": "binary_sensor.living_room_living_room_motion",
-                      "name": " Motion"
-                    },
-                    {
-                      "entity": "binary_sensor.living_room_presence",
-                      "name": " Presence"
-                    },
-                    {
-                      "entity": "sensor.living_room_sensor_living_room_temperature",
-                      "name": " Temperature"
-                    },
-                    {
-                      "entity": "binary_sensor.living_room_livingroomwindow",
-                      "name": " Window"
-                    }
-                  ],
-                  "title": "Living Room"
                 }
               ]
             }

@@ -1,2 +1,6 @@
 .DS_Store
 *.yaml#
+*.pyc
+config/.storage/auth
+config/.storage/auth
+config/.storage/http
