@@ -25,6 +25,7 @@ spec:
       initContainers:
         - name: init
           image: ghcr.io/smarter-project/ha_data_k8s:1.0
+          imagePullPolicy: Always          
           command: ["sh", "-c", "cp -r /data/config  /shared && cp -r /mosquitto /shared && touch /shared/config/ready.txt && touch /shared/mosquitto/ready.txt"]
           volumeMounts:
              - name: ha-config
@@ -33,8 +34,8 @@ spec:
                mountPath: /shared/mosquitto
 
       containers:
-        - image: ghcr.io/smarter-project/ha_data_k8s:1.0
-          name: data
+        - name: data
+          image: ghcr.io/smarter-project/ha_data_k8s:1.0
           volumeMounts:
              - name: ha-config
                mountPath: /shared/config

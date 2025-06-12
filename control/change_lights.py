@@ -10,8 +10,8 @@ import paho.mqtt.client as mqtt
 import threading
 
 # MQTT credentials and settings
-BROKER = os.getenv("MQTT_BROKER", "mosquitto")
-PORT = int(os.getenv("MQTT_PORT", "1883"))
+BROKER = os.getenv("MQTT_BROKER", "localhost")
+PORT = int(os.getenv("MQTT_PORT", "31883"))
 
 USERNAME = "mqtt-user"
 PASSWORD = "mqtt-user"
