@@ -1,9 +1,5 @@
-
-kubectl delete -f homeassistant-cm1-configmap.yaml
-
 kubectl delete -f homeassistant-service.yaml
 kubectl delete -f mosquitto-service.yaml
-
 
 kubectl delete -f data-deployment.yaml
 

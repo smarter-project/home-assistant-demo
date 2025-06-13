@@ -1,6 +1,5 @@
 kubectl apply -f ha-config-persistentvolumeclaim.yaml
 kubectl apply -f ha-mosquitto-persistentvolumeclaim.yaml
-kubectl apply -f homeassistant-cm1-configmap.yaml
 kubectl apply -f homeassistant-service.yaml
 kubectl apply -f mosquitto-service.yaml
 

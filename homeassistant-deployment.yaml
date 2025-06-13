@@ -39,18 +39,8 @@ spec:
           volumeMounts:
             - mountPath: /config
               name: ha-config
-            - mountPath: /etc/localtime
-              name: homeassistant-cm1
-              readOnly: true
-              subPath: localtime
       restartPolicy: Always
       volumes:
         - name: ha-config
           persistentVolumeClaim:
             claimName: ha-config
-        - configMap:
-            items:
-              - key: localtime
-                path: localtime
-            name: homeassistant-cm1
-          name: homeassistant-cm1
