@@ -1,0 +1,9 @@
+apiVersion: v2
+name: home-assistant-demo
+description: Home security - Home assistant demo
+home: https://getsmarter.io
+type: application
+version: 0.9.5
+appVersion: "2.0.0"
+icon: https://github.com/smarter-project/documentation/raw/main/ARM1636_Project_Logo_ST2_RGB_V1.png
+kubeVersion: ">=1.18.0-0"

@@ -1,0 +1,29 @@
+# Default values for homeassistant-demo
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+application:
+  appName: homeassistant-demo
+
+configuration:
+  dataContainer:
+    image: "ghcr.io/smarter-project/ha_data_k8s"
+    version: "1.0"
+  homeassistant:
+    nodePort: 30123
+    container:
+      init:
+        image: "alpine"
+        version: "latest"
+      main:
+        image: "ghcr.io/home-assistant/home-assistant"
+        version: "stable"
+  mosquitto:
+    nodePort: 31883
+    container:
+      init:
+        image: "alpine"
+        version: "latest"
+      main:
+        image: "eclipse-mosquitto"
+        version: "latest"
