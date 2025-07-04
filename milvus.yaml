@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: milvus-deployment
+  labels:
+    app: milvus
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: milvus
+  template:
+    metadata:
+      labels:
+        app: milvus
+    spec:
+      containers:
+        - name: milvus-container
+          image: atg-attk--edgeaidocker.artifactory.arm.com/milvusdb/milvus:v2.5.13
+          imagePullPolicy: IfNotPresent
+          command: ["milvus", "run", "standalone"]
+          env:
+            - name: ETCD_USE_EMBED
+              value: "true"
+            - name: COMMON_STORAGETYPE
+              value: "local"
+          ports:
+            - containerPort: 19530
+              protocol: TCP
+            - containerPort: 9091
+              protocol: TCP
+          resources:
+            requests:
+              memory: "640Mi"
+              cpu: "250m"
+            limits:
+              memory: "1280Mi"
+              cpu: "500m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: milvus-service
+spec:
+  type: NodePort
+  selector:
+    app: milvus
+  ports:
+    - name: "19530"
+      port: 19530          # Port the service is exposed on internally (ClusterIP)
+      targetPort: 19530    # Port the container listens on
+      nodePort: 30530      # Optional: the external port on each node
+    - name: "9091"
+      port: 9091           # Port the service is exposed on internally (ClusterIP)
+      targetPort: 9091     # Port the container listens on
+      nodePort: 30091      # Optional: the external port on each node

@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: face-mcp
+  labels:
+    app: face-mcp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: face-mcp
+  template:
+    metadata:
+      labels:
+        app: face-mcp
+    spec:
+      containers:
+        - name: face-mcp
+          image: atg-attk--edgeaidocker.artifactory.arm.com/face-recognition-mcp:latest
+          ports:
+            - containerPort: 7000
+              protocol: TCP
+          env:
+            - name: DANGEROUSLY_OMIT_AUTH
+              value: "true"
+            - name: TRITON_URL
+              value: "triton-inference-service:8000"  # May need a K8s service name instead
+            - name: MILVUS_HOST
+              value: "milvus-service"  # Replace with cluster IP or service name
+            - name: MILVUS_PORT
+              value: "19530"
+          volumeMounts:
+            - name: camera-images
+              mountPath: /images
+      imagePullSecrets:
+        - name: arm-artifactory-secret
+      volumes:
+        - name: camera-images
+          persistentVolumeClaim:
+            claimName: camera-images
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: face-mcp-service
+  labels:
+    app: face-mcp
+spec:
+  type: NodePort
+  selector:
+    app: face-mcp
+  ports:
+    - name: "7000"
+      port: 7000          # Port the service is exposed on internally (ClusterIP)
+      targetPort: 7000    # Port the container listens on
+      nodePort:  30700    # Optional: the external port on each node
+ 
