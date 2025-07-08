@@ -7,6 +7,6 @@ COPY ./images /data/images
 COPY ./control /data/control
 COPY ./update_mqtt.sh /data
 
-RUN apk add python3 mosquitto-clients curl
+RUN apk add python3 mosquitto-clients curl py3-paho-mqtt
 
 ENTRYPOINT ["/data/control/wait.sh"]

@@ -1,0 +1,89 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: triton-inference
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: triton-inference
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: triton-inference
+    spec:
+      initContainers:
+        - name: fetch-models
+          image: alpine:latest
+          command:
+            - sh
+            - -c
+            - |
+              if [ ! -z "$(ls -A /models/mvp_triton_model_repo)" ]; then
+                echo "/models is not empty. Exiting..."
+                exit 0
+              else
+                echo "/models is empty"
+              fi            
+              apk add --no-cache wget tar && \
+              wget -O /models/models.tar.gz https://artifactory.arm.com:443/artifactory/atg-attk.edgeai/models/mvp_triton_model_repo.tar.gz && \
+              tar -xzf /models/models.tar.gz -C /models && \
+              rm /models/models.tar.gz
+          volumeMounts:
+            - name: triton-models
+              mountPath: /models
+      containers:
+        - name: triton-server
+          image: atg-attk--edgeaidocker.artifactory.arm.com/triton_executorch_python312:latest
+          args:
+            - tritonserver
+            - --model-repository=/models/mvp_triton_model_repo
+            - --model-control-mode=poll
+            - --exit-timeout-secs=5
+          ports:
+            - containerPort: 8000  # gRPC
+            - containerPort: 8001  # HTTP
+            - containerPort: 8002  # Metrics
+          volumeMounts:
+            - name: triton-models
+              mountPath: /models
+            - name: shm-volume
+              mountPath: /dev/shm
+          resources:
+            requests:
+              memory: "4Gi"
+            limits:
+              memory: "4Gi"
+      volumes:
+        - name: triton-models
+          persistentVolumeClaim:
+            claimName: triton-models
+        - name: shm-volume
+          emptyDir:
+            medium: Memory
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: triton-inference-service
+spec:
+  type: NodePort
+  selector:
+    app: triton-inference
+  ports:
+    - name: "8000"
+      port: 8000          # Port the service is exposed on internally (ClusterIP)
+      targetPort: 8000    # Port the container listens on
+      nodePort: 30800     # Optional: the external port on each node
+
+    - name: "8001"
+      port: 8001          # Port the service is exposed on internally (ClusterIP)
+      targetPort: 8001    # Port the container listens on
+      nodePort: 30801     # Optional: the external port on each node
+
+    - name: "8002"
+      port: 8002          # Port the service is exposed on internally (ClusterIP)
+      targetPort: 8002    # Port the container listens on
+      nodePort: 30802     # Optional: the external port on each node

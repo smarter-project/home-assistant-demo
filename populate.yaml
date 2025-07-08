@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: populate
+spec:
+  template:
+    spec:
+      containers:
+        - name: populate-milvus
+          image: atg-attk--edgeaidocker.artifactory.arm.com/populate:latest
+          command:
+            - sh 
+            - -c
+            - |
+              echo "Waiting for Milvus to start"
+              python3 check.py
+              echo "Milvus ok"
+              python3 populate_milvus_face_db.py --images-dir=known-people-mvp --fresh --milvus-port=19530 --milvus-host=milvus-service
+      restartPolicy: Never
+  backoffLimit: 0
