@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "Home Assistant": {
+      "command": "mcp-proxy",
+      "args": [
+        "http://localhost:30123/mcp_server/sse"
+      ],
+      "env": {
+        "API_ACCESS_TOKEN": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0OTA4YzBjZmRlMTg0ZjAyOTE4Zjg4ODdjMzBiNGI4OCIsImlhdCI6MTc0ODUyNzQ4MCwiZXhwIjoyMDYzODg3NDgwfQ.MmXRZ38vUlKNijfYaBEdR_A2MoX7NwY_88lBe1BddfA"
+      }
+    },
+    "Home Assistant Cameras": {
+      "url": "http://localhost:30900/mcp"
+    },
+    "face_recognition": {
+      "url": "http://localhost:30700/mcp"
+    }
+  }
+}
