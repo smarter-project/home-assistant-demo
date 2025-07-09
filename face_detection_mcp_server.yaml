@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: face-mcp
-          image: atg-attk--edgeaidocker.artifactory.arm.com/face-recognition-mcp:latest
+          image: ghcr.io/smarter-project/face-recognition-mcp:latest
           ports:
             - containerPort: 7000
               protocol: TCP

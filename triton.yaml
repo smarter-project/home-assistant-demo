@@ -28,7 +28,7 @@ spec:
                 echo "/models is empty"
               fi            
               apk add --no-cache wget tar && \
-              wget -O /models/models.tar.gz https://artifactory.arm.com:443/artifactory/atg-attk.edgeai/models/mvp_triton_model_repo.tar.gz && \
+              wget -O /models/models.tar.gz https://github.com/smarter-project/home-assistant-demo/releases/download/v1.0.0/models.tar.gz && \
               tar -xzf /models/models.tar.gz -C /models && \
               rm /models/models.tar.gz
           volumeMounts:
@@ -36,7 +36,7 @@ spec:
               mountPath: /models
       containers:
         - name: triton-server
-          image: atg-attk--edgeaidocker.artifactory.arm.com/triton_executorch_python312:latest
+          image: ghcr.io/smarter-project/triton_executorch_python312:latest
           args:
             - tritonserver
             - --model-repository=/models/mvp_triton_model_repo

@@ -7,7 +7,7 @@ spec:
     spec:
       containers:
         - name: populate-milvus
-          image: atg-attk--edgeaidocker.artifactory.arm.com/populate:latest
+          image: ghcr.io/smarter-project/populate:latest
           command:
             - sh 
             - -c

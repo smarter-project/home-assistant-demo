@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: ha-camera-mcp
-          image: atg-attk--edgeaidocker.artifactory.arm.com/homeassistant-camera-mcp:latest
+          image: ghcr.io/smarter-project/homeassistant-camera-mcp:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 9000

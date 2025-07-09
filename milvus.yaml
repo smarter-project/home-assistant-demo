@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: milvus-container
-          image: atg-attk--edgeaidocker.artifactory.arm.com/milvusdb/milvus:v2.5.13
+          image: ghcr.io/smarter-project/milvusdb/milvus:v2.5.13
           imagePullPolicy: IfNotPresent
           command: ["milvus", "run", "standalone"]
           env:
