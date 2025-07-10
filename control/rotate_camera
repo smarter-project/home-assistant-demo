@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/ash
 
 SCRIPT="$0"
 # Resolve relative path if needed
@@ -9,9 +9,11 @@ esac
 
 SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
 
-image_list=("front.jpg" "mrs-cobel-3.png"  "jim-4.png" "mrs-cobel-5.png" "delivery.jpg" "jim-3.png" "mrs-cobel-2.png" "front.jpg" "jim-1.jpg" "mrs-cobel-1.png" "jim-2.png" "mrs-cobel-4.png" "jim-5.png")
+image_list="front.jpg mrs-cobel-3.png jim-4.png mrs-cobel-5.png delivery.jpg jim-3.png mrs-cobel-2.png front.jpg jim-1.jpg mrs-cobel-1.png jim-2.png mrs-cobel-4.png jim-5.png"
 
-for item in "${image_list[@]}"; do
-    $SCRIPT_DIR/external_oneshot.py --device 'home/hallway/front_door_camera' --state "File:$SCRIPT_DIR/../images/$item"
-    sleep 30
+while true; do
+    for item in $image_list; do
+        $SCRIPT_DIR/external_oneshot.py --device 'home/hallway/front_door_camera' --state "File:$SCRIPT_DIR/../images/$item"
+        sleep 30
+    done
 done

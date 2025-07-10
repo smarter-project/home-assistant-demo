@@ -24,7 +24,7 @@ spec:
     spec:
       initContainers:
         - name: init
-          image: ghcr.io/smarter-project/ha_data_k8s:1.1
+          image: ghcr.io/smarter-project/ha_data_k8s:1.2
           imagePullPolicy: Always          
           command: ["sh", "-c", "cp -r /data/config  /shared && cp -r /mosquitto /shared && \
                    /data/update_mqtt.sh &&\
@@ -37,18 +37,21 @@ spec:
                mountPath: /shared/mosquitto
           env:
             - name: MQTT_HOST
-              value: "mosquitto3"
+              value: "mosquitto"
 
 
       containers:
         - name: data
-          image: ghcr.io/smarter-project/ha_data_k8s:1.1
+          image: ghcr.io/smarter-project/ha_data_k8s:1.2
           imagePullPolicy: Always                    
           volumeMounts:
              - name: ha-config
                mountPath: /shared/config
              - name: ha-mosquitto
                mountPath: /shared/mosquitto
+          env:
+            - name: SIMULATE
+              value: "ON"
 
       volumes:
           - name: ha-config
