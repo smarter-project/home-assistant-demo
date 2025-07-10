@@ -5,6 +5,7 @@ import json
 import random
 import re
 import argparse
+import os
 
 parser = argparse.ArgumentParser(description="Change the state of a device")
 
