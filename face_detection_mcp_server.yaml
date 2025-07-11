@@ -14,6 +14,39 @@ spec:
       labels:
         app: face-mcp
     spec:
+     ############################################
+      # 1) Wait-for-dependencies init container  #
+      ############################################
+      initContainers:
+        - name: wait-for-deps
+          image: busybox:1.36           # tiny, has sh + nc
+          env:                          # reuse the same env values
+            - name: TRITON_URL
+              value: "triton-inference-service:8000"
+            - name: MILVUS_HOST
+              value: "milvus-service"
+            - name: MILVUS_PORT
+              value: "19530"
+          command:
+            - /bin/sh
+            - -c
+            - |
+              set -eu
+              # --- wait for Milvus ---
+              echo "Waiting for Milvus at ${MILVUS_HOST}:${MILVUS_PORT} ..."
+              until nc -z ${MILVUS_HOST} ${MILVUS_PORT}; do
+                echo "  not yet; sleeping 2s"; sleep 2;
+              done
+              echo "Milvus is reachable."
+              
+              # --- wait for Triton ---
+              TRITON_HOST=$(echo ${TRITON_URL} | cut -d: -f1)
+              TRITON_PORT=$(echo ${TRITON_URL} | cut -d: -f2)
+              echo "Waiting for Triton at ${TRITON_HOST}:${TRITON_PORT} ..."
+              until nc -z ${TRITON_HOST} ${TRITON_PORT}; do
+                echo "  not yet; sleeping 2s"; sleep 2;
+              done
+              echo "Triton is reachable."    
       containers:
         - name: face-mcp
           image: ghcr.io/smarter-project/face-recognition-mcp:latest
