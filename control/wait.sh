@@ -30,6 +30,7 @@ while true; do
     sleep 5
 done
 
+sleep 5
 
 SCRIPT_DIR=$(dirname "$0")
 

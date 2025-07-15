@@ -2,6 +2,7 @@ import os
 import requests
 import base64
 from fastmcp import FastMCP
+from datetime import datetime
 
 API_URL = "http://homeassistant:8123"
 TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0OTA4YzBjZmRlMTg0ZjAyOTE4Zjg4ODdjMzBiNGI4OCIsImlhdCI6MTc0ODUyNzQ4MCwiZXhwIjoyMDYzODg3NDgwfQ.MmXRZ38vUlKNijfYaBEdR_A2MoX7NwY_88lBe1BddfA"
@@ -62,9 +63,11 @@ mcp = FastMCP("HomeAssistant Camera Server")
 
 @mcp.tool()
 def capture(name: str) -> str:
-    """save a snapshot from the specified camera"""
+    """save a snapshot from the specified camera to a file"""
     id = map_name_to_entity(name)
-    snapshot_path = f"/images/{id}.jpg"
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+    snapshot_path = f"/images/{id}_{timestamp}.jpg"
     if id != "":
         return get_camera_snapshot(
             api_url=API_URL,
