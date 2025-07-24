@@ -21,7 +21,7 @@ spec:
       containers:
         - name: facedb
           image: ghcr.io/smarter-project/dbmodule-facedb:latest
-                      imagePullPolicy: IfNotPresent
+          imagePullPolicy: IfNotPresent
           env:
             - name: MQTT_BROKER
               value: "mosquitto"
