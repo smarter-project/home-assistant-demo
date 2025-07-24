@@ -3,8 +3,17 @@ kubectl apply -f ha-mosquitto-persistentvolumeclaim.yaml
 kubectl apply -f homeassistant-service.yaml
 kubectl apply -f mosquitto-service.yaml
 
+# Deploy DB modules
+kubectl apply -f dbmodule_persistent_volumes.yaml
+kubectl apply -f dbmodule_data_init.yaml
+kubectl apply -f dbmodule_sensordb.yaml
+kubectl apply -f dbmodule_facedb.yaml
+kubectl apply -f dbmodule_servicedb.yaml
+
 kubectl apply -f data-deployment.yaml
 kubectl apply -f mosquitto-deployment.yaml
 kubectl apply -f homeassistant-deployment.yaml
 
+# Deploy Info Retrieval MCP Service
+kubectl apply -f info_retrieval_mcp_server.yaml
 

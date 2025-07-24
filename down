@@ -6,5 +6,15 @@ kubectl delete -f data-deployment.yaml
 kubectl delete -f mosquitto-deployment.yaml
 kubectl delete -f homeassistant-deployment.yaml
 
+# Clean up Info Retrieval MCP Service
+kubectl delete -f info_retrieval_mcp_server.yaml
+
+# Clean up DB modules
+kubectl delete -f dbmodule_servicedb.yaml
+kubectl delete -f dbmodule_facedb.yaml
+kubectl delete -f dbmodule_sensordb.yaml
+kubectl delete -f dbmodule_data_init.yaml
+kubectl delete -f dbmodule_persistent_volumes.yaml
+
 kubectl delete -f ha-config-persistentvolumeclaim.yaml
 kubectl delete -f ha-mosquitto-persistentvolumeclaim.yaml

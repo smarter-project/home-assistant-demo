@@ -1,0 +1,50 @@
+# FaceDB known people volume
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: dbmodule-facedb-known-people
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Mi
+
+---
+# FaceDB vector database volume
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: dbmodule-facedb-vector-db
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Mi
+
+---
+# SensorDB data volume
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: dbmodule-sensordb-data
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Mi
+
+---
+# InfluxDB data volume
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: dbmodule-influxdb-data
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 200Mi 

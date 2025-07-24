@@ -14,6 +14,9 @@
     },
     "face_recognition": {
       "url": "http://localhost:30700/mcp"
+    },
+    "info_retrieval": {
+      "url": "http://localhost:30701/mcp"
     }
   }
 }

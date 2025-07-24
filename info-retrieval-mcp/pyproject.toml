@@ -1,0 +1,16 @@
+[project]
+name = "info-retrieval-mcp-server"
+version = "0.1.0"
+description = "Information Retrieval MCP Server for Home Assistant"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp[cli]>=1.10.1",
+    "paho-mqtt>=1.6.1",
+    "uvicorn>=0.35.0",
+    "gunicorn>=21.2.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["info_retrieval_mcp"] 

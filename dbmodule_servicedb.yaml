@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dbmodule-servicedb
+  labels:
+    app: dbmodule-servicedb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dbmodule-servicedb
+  template:
+    metadata:
+      labels:
+        app: dbmodule-servicedb
+    spec:
+      initContainers:
+        - name: wait-for-mqtt
+          image: busybox:1.28
+          command: ['sh', '-c', 'until nc -z mosquitto 1883; do echo waiting for mqtt; sleep 2; done;']
+        - name: wait-for-facedb-mqtt
+          image: busybox:1.28
+          command: ['sh', '-c', 'echo "FaceDB is MQTT-based, no HTTP port to check"; sleep 5;']
+        - name: wait-for-sensordb-mqtt
+          image: busybox:1.28
+          command: ['sh', '-c', 'echo "SensorDB is MQTT-based, no HTTP port to check"; sleep 5;']
+      containers:
+        - name: servicedb
+          image: ghcr.io/smarter-project/dbmodule-servicedb:latest
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: MQTT_BROKER
+              value: "mosquitto"
+            - name: MQTT_PORT
+              value: "1883"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dbmodule-servicedb-service
+  labels:
+    app: dbmodule-servicedb
+spec:
+  type: ClusterIP
+  selector:
+    app: dbmodule-servicedb
+  ports:
+    - name: "8010"
+      port: 8010
+      targetPort: 8010 

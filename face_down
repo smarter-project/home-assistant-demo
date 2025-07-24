@@ -1,7 +1,5 @@
 kubectl delete -f triton_models.yaml
 kubectl delete -f triton.yaml
-kubectl delete -f milvus.yaml
-kubectl delete -f populate.yaml
 
 kubectl delete -f camera_images.yaml
 kubectl delete -f face_detection_mcp_server.yaml

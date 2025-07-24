@@ -1,0 +1,114 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dbmodule-influxdb
+  labels:
+    app: dbmodule-influxdb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dbmodule-influxdb
+  template:
+    metadata:
+      labels:
+        app: dbmodule-influxdb
+    spec:
+      containers:
+        - name: influxdb
+          image: influxdb:2.7
+          ports:
+            - containerPort: 8086
+              protocol: TCP
+          env:
+            - name: DOCKER_INFLUXDB_INIT_MODE
+              value: "setup"
+            - name: DOCKER_INFLUXDB_INIT_USERNAME
+              value: "admin"
+            - name: DOCKER_INFLUXDB_INIT_PASSWORD
+              value: "adminpassword"
+            - name: DOCKER_INFLUXDB_INIT_ORG
+              value: "my_org"
+            - name: DOCKER_INFLUXDB_INIT_BUCKET
+              value: "sensor_bucket"
+            - name: DOCKER_INFLUXDB_INIT_ADMIN_TOKEN
+              value: "deadbeef"
+          volumeMounts:
+            - name: influxdb-data
+              mountPath: /var/lib/influxdb2
+      volumes:
+        - name: influxdb-data
+          persistentVolumeClaim:
+            claimName: dbmodule-influxdb-data
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dbmodule-influxdb-service
+  labels:
+    app: dbmodule-influxdb
+spec:
+  type: ClusterIP
+  selector:
+    app: dbmodule-influxdb
+  ports:
+    - name: "8086"
+      port: 8086
+      targetPort: 8086
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dbmodule-sensordb
+  labels:
+    app: dbmodule-sensordb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dbmodule-sensordb
+  template:
+    metadata:
+      labels:
+        app: dbmodule-sensordb
+    spec:
+      initContainers:
+        - name: wait-for-mqtt
+          image: busybox:1.28
+          command: ['sh', '-c', 'until nc -z mosquitto 1883; do echo waiting for mqtt; sleep 2; done;']
+        - name: wait-for-influxdb
+          image: busybox:1.28
+          command: ['sh', '-c', 'until nc -z dbmodule-influxdb-service 8086; do echo waiting for influxdb; sleep 2; done;']
+      containers:
+        - name: sensordb
+          image: ghcr.io/smarter-project/dbmodule-sensordb:latest
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: MQTT_BROKER
+              value: "mosquitto"
+            - name: MQTT_PORT
+              value: "1883"
+            - name: INFLUXDB_URL
+              value: "http://dbmodule-influxdb-service:8086"
+          volumeMounts:
+            - name: sensor-data
+              mountPath: /app/SensorData
+      volumes:
+        - name: sensor-data
+          persistentVolumeClaim:
+            claimName: dbmodule-sensordb-data
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dbmodule-sensordb-service
+  labels:
+    app: dbmodule-sensordb
+spec:
+  type: ClusterIP
+  selector:
+    app: dbmodule-sensordb
+  ports:
+    - name: "8012"
+      port: 8012
+      targetPort: 8012 

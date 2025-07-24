@@ -1,0 +1,869 @@
+[
+  {
+    "entity_id": "home/livingroom_light/state",
+    "state": "OFF",
+    "attributes": {
+      "device_class": "light",
+      "friendly_name": "Living Room Light",
+      "room": "living room",
+      "sensor_type": "light",
+      "unique_id": "livingroom_light_01",
+      "manufacturer": "DIY",
+      "model": "MQTT Light v1"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_livingroom_light",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/bedroom1_light/state",
+    "state": "OFF",
+    "attributes": {
+      "device_class": "light",
+      "friendly_name": "Bedroom 1 Light",
+      "room": "bedroom 1",
+      "sensor_type": "light",
+      "unique_id": "bedroom1_light_01",
+      "manufacturer": "DIY",
+      "model": "MQTT Light v1"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_bedroom1_light",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/bedroom2_light/state",
+    "state": "OFF",
+    "attributes": {
+      "device_class": "light",
+      "friendly_name": "Bedroom 2 Light",
+      "room": "bedroom 2",
+      "sensor_type": "light",
+      "unique_id": "bedroom2_light_01",
+      "manufacturer": "DIY",
+      "model": "MQTT Light v1"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_bedroom2_light",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/hallway_light/state",
+    "state": "OFF",
+    "attributes": {
+      "device_class": "light",
+      "friendly_name": "Hallway Light",
+      "room": "hallway",
+      "sensor_type": "light",
+      "unique_id": "hallway_light_01",
+      "manufacturer": "DIY",
+      "model": "MQTT Light v1"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_hallway_light",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/kitchen_light/state",
+    "state": "OFF",
+    "attributes": {
+      "device_class": "light",
+      "friendly_name": "Kitchen Light",
+      "room": "kitchen",
+      "sensor_type": "light",
+      "unique_id": "kitchen_light_01",
+      "manufacturer": "DIY",
+      "model": "MQTT Light v1"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_kitchen_light",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/garage_light/state",
+    "state": "OFF",
+    "attributes": {
+      "device_class": "light",
+      "friendly_name": "Garage Light",
+      "room": "garage",
+      "sensor_type": "light",
+      "unique_id": "garage_light_01",
+      "manufacturer": "DIY",
+      "model": "MQTT Light v1"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_garage_light",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/bathroom_light/state",
+    "state": "OFF",
+    "attributes": {
+      "device_class": "light",
+      "friendly_name": "Bathroom Light",
+      "room": "bathroom",
+      "sensor_type": "light",
+      "unique_id": "bathroom_light_01",
+      "manufacturer": "DIY",
+      "model": "MQTT Light v1"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_bathroom_light",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/garden_light/state",
+    "state": "OFF",
+    "attributes": {
+      "device_class": "light",
+      "friendly_name": "Garden Light",
+      "room": "garden",
+      "sensor_type": "light",
+      "unique_id": "garden_light_01",
+      "manufacturer": "DIY",
+      "model": "MQTT Light v1"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_garden_light",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/living_room/temperature",
+    "state": "19.8",
+    "attributes": {
+      "device_class": "temperature",
+      "friendly_name": "Living Room Temperature",
+      "room": "living room",
+      "sensor_type": "temperature",
+      "unit_of_measurement": "°C",
+      "unique_id": "living_room_temperature_01",
+      "manufacturer": "DIY",
+      "model": "ESP32 TempSensor"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_living_room_temp",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/bedroom1/temperature",
+    "state": "19.8",
+    "attributes": {
+      "device_class": "temperature",
+      "friendly_name": "Bedroom 1 Temperature",
+      "room": "bedroom 1",
+      "sensor_type": "temperature",
+      "unit_of_measurement": "°C",
+      "unique_id": "bedroom1_temperature_01",
+      "manufacturer": "DIY",
+      "model": "ESP32 TempSensor"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_bedroom1_temp",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/bedroom2/temperature",
+    "state": "19.8",
+    "attributes": {
+      "device_class": "temperature",
+      "friendly_name": "Bedroom 2 Temperature",
+      "room": "bedroom 2",
+      "sensor_type": "temperature",
+      "unit_of_measurement": "°C",
+      "unique_id": "bedroom2_temperature_01",
+      "manufacturer": "DIY",
+      "model": "ESP32 TempSensor"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_bedroom2_temp",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/kitchen/temperature",
+    "state": "19.8",
+    "attributes": {
+      "device_class": "temperature",
+      "friendly_name": "Kitchen Temperature",
+      "room": "kitchen",
+      "sensor_type": "temperature",
+      "unit_of_measurement": "°C",
+      "unique_id": "kitchen_temperature_01",
+      "manufacturer": "DIY",
+      "model": "ESP32 TempSensor"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_kitchen_temp",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/hallway/temperature",
+    "state": "19.8",
+    "attributes": {
+      "device_class": "temperature",
+      "friendly_name": "Hallway Temperature",
+      "room": "hallway",
+      "sensor_type": "temperature",
+      "unit_of_measurement": "°C",
+      "unique_id": "hallway_temperature_01",
+      "manufacturer": "DIY",
+      "model": "ESP32 TempSensor"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_hallway_temp",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/garage/temperature",
+    "state": "19.8",
+    "attributes": {
+      "device_class": "temperature",
+      "friendly_name": "Garage Temperature",
+      "room": "garage",
+      "sensor_type": "temperature",
+      "unit_of_measurement": "°C",
+      "unique_id": "garage_temperature_01",
+      "manufacturer": "DIY",
+      "model": "ESP32 TempSensor"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_garage_temp",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/bathroom/temperature",
+    "state": "19.8",
+    "attributes": {
+      "device_class": "temperature",
+      "friendly_name": "Bathroom Temperature",
+      "room": "bathroom",
+      "sensor_type": "temperature",
+      "unit_of_measurement": "°C",
+      "unique_id": "bathroom_temperature_01",
+      "manufacturer": "DIY",
+      "model": "ESP32 TempSensor"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_bathroom_temp",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/kitchen_motion/state",
+    "state": "CLOSED",
+    "attributes": {
+      "device_class": "motion",
+      "friendly_name": "Kitchen Motion",
+      "room": "kitchen",
+      "sensor_type": "motion",
+      "unique_id": "motion_01",
+      "manufacturer": "DIY",
+      "model": "Infrared2"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_kitchen_motion",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/bathroom_motion/state",
+    "state": "CLOSED",
+    "attributes": {
+      "device_class": "motion",
+      "friendly_name": "Bathroom Motion",
+      "room": "bathroom",
+      "sensor_type": "motion",
+      "unique_id": "motion_02",
+      "manufacturer": "DIY",
+      "model": "Infrared2"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_bathroom_motion",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/bedroom_1_motion/state",
+    "state": "CLOSED",
+    "attributes": {
+      "device_class": "motion",
+      "friendly_name": "Bedroom 1 Motion",
+      "room": "bedroom 1",
+      "sensor_type": "motion",
+      "unique_id": "motion_03",
+      "manufacturer": "DIY",
+      "model": "Infrared2"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_bedroom1_motion",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/bedroom_2_motion/state",
+    "state": "CLOSED",
+    "attributes": {
+      "device_class": "motion",
+      "friendly_name": "Bedroom 2 Motion",
+      "room": "bedroom 2",
+      "sensor_type": "motion",
+      "unique_id": "motion_04",
+      "manufacturer": "DIY",
+      "model": "Infrared2"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_bedroom2_motion",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/livingroom_motion/state",
+    "state": "CLOSED",
+    "attributes": {
+      "device_class": "motion",
+      "friendly_name": "Living Room Motion",
+      "room": "living room",
+      "sensor_type": "motion",
+      "unique_id": "motion_05",
+      "manufacturer": "DIY",
+      "model": "Infrared2"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_livingroom_motion",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/garden_motion/state",
+    "state": "CLOSED",
+    "attributes": {
+      "device_class": "motion",
+      "friendly_name": "Garden Motion",
+      "room": "garden",
+      "sensor_type": "motion",
+      "unique_id": "motion_06",
+      "manufacturer": "DIY",
+      "model": "Infrared2"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_garden_motion",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/garage_motion/state",
+    "state": "CLOSED",
+    "attributes": {
+      "device_class": "motion",
+      "friendly_name": "Garage Motion",
+      "room": "garage",
+      "sensor_type": "motion",
+      "unique_id": "motion_07",
+      "manufacturer": "DIY",
+      "model": "Infrared2"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_garage_motion",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/hallway_motion/state",
+    "state": "CLOSED",
+    "attributes": {
+      "device_class": "motion",
+      "friendly_name": "Hallway Motion",
+      "room": "hallway",
+      "sensor_type": "motion",
+      "unique_id": "motion_08",
+      "manufacturer": "DIY",
+      "model": "Infrared2"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_hallway_motion",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/front_door/state",
+    "state": "CLOSED",
+    "attributes": {
+      "device_class": "door",
+      "friendly_name": "Front Door",
+      "room": "entrance",
+      "sensor_type": "door",
+      "unique_id": "front_door_01",
+      "manufacturer": "DIY",
+      "model": "Magnetic Contact"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_front_door",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/Back_door/state",
+    "state": "CLOSED",
+    "attributes": {
+      "device_class": "door",
+      "friendly_name": "Back Door",
+      "room": "entrance",
+      "sensor_type": "door",
+      "unique_id": "back_door_01",
+      "manufacturer": "DIY",
+      "model": "Magnetic Contact"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_back_door",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/garage_door/state",
+    "state": "CLOSED",
+    "attributes": {
+      "device_class": "door",
+      "friendly_name": "Garage Door",
+      "room": "garage",
+      "sensor_type": "door",
+      "unique_id": "garage_door_01",
+      "manufacturer": "DIY",
+      "model": "Magnetic Contact"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_garage_door",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/kitchen_window/state",
+    "state": "CLOSED",
+    "attributes": {
+      "device_class": "window",
+      "friendly_name": "Kitchen Window",
+      "room": "kitchen",
+      "sensor_type": "window",
+      "unique_id": "window_01",
+      "manufacturer": "DIY",
+      "model": "Magnetic Contact"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_kitchen_window",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/bathroom_window/state",
+    "state": "CLOSED",
+    "attributes": {
+      "device_class": "window",
+      "friendly_name": "Bathroom Window",
+      "room": "bathroom",
+      "sensor_type": "window",
+      "unique_id": "window_02",
+      "manufacturer": "DIY",
+      "model": "Magnetic Contact"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_bathroom_window",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/bedroom_1_window/state",
+    "state": "CLOSED",
+    "attributes": {
+      "device_class": "window",
+      "friendly_name": "Bedroom 1 Window",
+      "room": "bedroom 1",
+      "sensor_type": "window",
+      "unique_id": "window_03",
+      "manufacturer": "DIY",
+      "model": "Magnetic Contact"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_bedroom1_window",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/bedroom_2_window/state",
+    "state": "CLOSED",
+    "attributes": {
+      "device_class": "window",
+      "friendly_name": "Bedroom 2 Window",
+      "room": "bedroom 2",
+      "sensor_type": "window",
+      "unique_id": "window_04",
+      "manufacturer": "DIY",
+      "model": "Magnetic Contact"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_bedroom2_window",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/livingroom_window/state",
+    "state": "CLOSED",
+    "attributes": {
+      "device_class": "window",
+      "friendly_name": "Living Room Window",
+      "room": "living room",
+      "sensor_type": "window",
+      "unique_id": "window_05",
+      "manufacturer": "DIY",
+      "model": "Magnetic Contact"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_livingroom_window",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/kitchen_presence/state",
+    "state": "CLOSED",
+    "attributes": {
+      "device_class": "presence",
+      "friendly_name": "Kitchen Presence",
+      "room": "kitchen",
+      "sensor_type": "presence",
+      "unique_id": "presence_01",
+      "manufacturer": "DIY",
+      "model": "Infrared2"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_kitchen_presence",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/bathroom_presence/state",
+    "state": "CLOSED",
+    "attributes": {
+      "device_class": "presence",
+      "friendly_name": "Bathroom Presence",
+      "room": "bathroom",
+      "sensor_type": "presence",
+      "unique_id": "presence_02",
+      "manufacturer": "DIY",
+      "model": "Infrared2"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_bathroom_presence",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/bedroom_1_presence/state",
+    "state": "CLOSED",
+    "attributes": {
+      "device_class": "presence",
+      "friendly_name": "Bedroom 1 Presence",
+      "room": "bedroom 1",
+      "sensor_type": "presence",
+      "unique_id": "presence_03",
+      "manufacturer": "DIY",
+      "model": "Infrared2"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_bedroom1_presence",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/bedroom_2_presence/state",
+    "state": "CLOSED",
+    "attributes": {
+      "device_class": "presence",
+      "friendly_name": "Bedroom 2 Presence",
+      "room": "bedroom 2",
+      "sensor_type": "presence",
+      "unique_id": "presence_04",
+      "manufacturer": "DIY",
+      "model": "Infrared2"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_bedroom2_presence",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/livingroom_presence/state",
+    "state": "CLOSED",
+    "attributes": {
+      "device_class": "presence",
+      "friendly_name": "Living Room Presence",
+      "room": "living room",
+      "sensor_type": "presence",
+      "unique_id": "presence_05",
+      "manufacturer": "DIY",
+      "model": "Infrared2"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_livingroom_presence",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/garden_presence/state",
+    "state": "CLOSED",
+    "attributes": {
+      "device_class": "presence",
+      "friendly_name": "Garden Presence",
+      "room": "garden",
+      "sensor_type": "presence",
+      "unique_id": "presence_06",
+      "manufacturer": "DIY",
+      "model": "Infrared2"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_garden_presence",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/garage_presence/state",
+    "state": "CLOSED",
+    "attributes": {
+      "device_class": "presence",
+      "friendly_name": "Garage Presence",
+      "room": "garage",
+      "sensor_type": "presence",
+      "unique_id": "presence_07",
+      "manufacturer": "DIY",
+      "model": "Infrared2"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_garage_presence",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/hallway/siren/state",
+    "state": "OFF",
+    "attributes": {
+      "device_class": "siren",
+      "friendly_name": "Hallway Siren",
+      "room": "hallway",
+      "sensor_type": "siren",
+      "unique_id": "siren_01",
+      "manufacturer": "DIY",
+      "model": "Alarm Siren v1"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_hallway_siren",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/alarm",
+    "state": "OFF",
+    "attributes": {
+      "device_class": "alarm",
+      "friendly_name": "Home Alarm",
+      "room": "system",
+      "sensor_type": "alarm",
+      "unique_id": "alarm_01",
+      "manufacturer": "DIY",
+      "model": "Security System v1"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_home_alarm",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/livingroom/camera1",
+    "state": "OFF",
+    "attributes": {
+      "device_class": "camera",
+      "friendly_name": "Living Room Camera 1",
+      "room": "living room",
+      "sensor_type": "camera",
+      "unique_id": "camera_01",
+      "manufacturer": "DIY",
+      "model": "IP Camera v1"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_livingroom_camera1",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/livingroom/camera2",
+    "state": "OFF",
+    "attributes": {
+      "device_class": "camera",
+      "friendly_name": "Living Room Camera 2",
+      "room": "living room",
+      "sensor_type": "camera",
+      "unique_id": "camera_02",
+      "manufacturer": "DIY",
+      "model": "IP Camera v1"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_livingroom_camera2",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "home/hallway/front_door_camera",
+    "state": "OFF",
+    "attributes": {
+      "device_class": "camera",
+      "friendly_name": "Front Door Camera",
+      "room": "hallway",
+      "sensor_type": "camera",
+      "unique_id": "camera_03",
+      "manufacturer": "DIY",
+      "model": "IP Camera v1"
+    },
+    "last_changed": "2025-01-15T00:00:00Z",
+    "last_updated": "2025-01-15T00:00:00Z",
+    "context": {
+      "id": "initial_front_door_camera",
+      "parent_id": null,
+      "user_id": null
+    }
+  }
+] 

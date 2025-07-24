@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dbmodule-facedb
+  labels:
+    app: dbmodule-facedb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dbmodule-facedb
+  template:
+    metadata:
+      labels:
+        app: dbmodule-facedb
+    spec:
+      initContainers:
+        - name: wait-for-mqtt
+          image: busybox:1.28
+          command: ['sh', '-c', 'until nc -z mosquitto 1883; do echo waiting for mqtt; sleep 2; done;']
+      containers:
+        - name: facedb
+          image: ghcr.io/smarter-project/dbmodule-facedb:latest
+                      imagePullPolicy: IfNotPresent
+          env:
+            - name: MQTT_BROKER
+              value: "mosquitto"
+            - name: MQTT_PORT
+              value: "1883"
+          volumeMounts:
+            - name: known-people
+              mountPath: /app/known_people
+            - name: vector-db
+              mountPath: /app/vectorDB
+      volumes:
+        - name: known-people
+          persistentVolumeClaim:
+            claimName: dbmodule-facedb-known-people
+        - name: vector-db
+          persistentVolumeClaim:
+            claimName: dbmodule-facedb-vector-db
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dbmodule-facedb-service
+  labels:
+    app: dbmodule-facedb
+spec:
+  type: ClusterIP
+  selector:
+    app: dbmodule-facedb
+  ports:
+    - name: "8011"
+      port: 8011
+      targetPort: 8011 

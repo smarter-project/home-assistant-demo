@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
         - name: face-mcp
-          image: ghcr.io/smarter-project/face-recognition-mcp:latest
+          image: ghcr.io/smarter-project/face-recognition-db-mcp:latest
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 7000
               protocol: TCP
@@ -24,16 +25,14 @@ spec:
             - name: DANGEROUSLY_OMIT_AUTH
               value: "true"
             - name: TRITON_URL
-              value: "triton-inference-service:8000"  # May need a K8s service name instead
-            - name: MILVUS_HOST
-              value: "milvus-service"  # Replace with cluster IP or service name
-            - name: MILVUS_PORT
-              value: "19530"
+              value: "triton-inference-service:8000"
+            - name: MQTT_BROKER
+              value: "mosquitto"
+            - name: MQTT_PORT
+              value: "1883"
           volumeMounts:
             - name: camera-images
               mountPath: /images
-      imagePullSecrets:
-        - name: arm-artifactory-secret
       volumes:
         - name: camera-images
           persistentVolumeClaim:

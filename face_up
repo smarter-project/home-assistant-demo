@@ -1,7 +1,5 @@
 kubectl apply -f triton_models.yaml
 kubectl apply -f triton.yaml
-kubectl apply -f milvus.yaml
-kubectl apply -f populate.yaml
 
 kubectl apply -f camera_images.yaml
 kubectl apply -f face_detection_mcp_server.yaml

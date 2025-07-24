@@ -1,0 +1,37 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: dbmodule-data-init
+  labels:
+    app: dbmodule-data-init
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: data-init
+          image: ghcr.io/smarter-project/dbmodule-data:latest
+          imagePullPolicy: IfNotPresent
+          command: ["/copy_data.sh"]
+          volumeMounts:
+            - name: facedb-known-people
+              mountPath: /facedb-known-people
+            - name: facedb-vector-db
+              mountPath: /facedb-vector-db
+            - name: sensordb-data
+              mountPath: /sensordb-data
+            - name: influxdb-data
+              mountPath: /influxdb-data
+      volumes:
+        - name: facedb-known-people
+          persistentVolumeClaim:
+            claimName: dbmodule-facedb-known-people
+        - name: facedb-vector-db
+          persistentVolumeClaim:
+            claimName: dbmodule-facedb-vector-db
+        - name: sensordb-data
+          persistentVolumeClaim:
+            claimName: dbmodule-sensordb-data
+        - name: influxdb-data
+          persistentVolumeClaim:
+            claimName: dbmodule-influxdb-data 
