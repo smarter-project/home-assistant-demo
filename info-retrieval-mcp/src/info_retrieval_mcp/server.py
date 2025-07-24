@@ -228,12 +228,19 @@ class SensorManager:
         """MQTT message callback for sensor updates"""
         try:
             topic = msg.topic
-            payload = msg.payload.decode()
             timestamp = datetime.now().isoformat()
 
-            # logger.info(f"[MQTT] Received message on topic: {topic}")
-            # logger.info(f"[MQTT] Payload: {payload}")
-            logger.debug(f"Received sensor update: {topic} = {payload}")
+            # Try to decode payload as UTF-8, fallback to base64 for binary data
+            try:
+                payload = msg.payload.decode('utf-8')
+                logger.debug(f"Received sensor update: {topic} = {payload}")
+            except UnicodeDecodeError:
+                # If UTF-8 decode fails, it might be binary data
+                import base64
+                payload = base64.b64encode(msg.payload).decode('utf-8')
+                logger.debug(f"Received binary sensor update: {topic} = [base64 encoded]")
+                # TBD in the future. 
+                return
 
             # Only update if topic is in sensor_map
             if topic not in self.sensor_map:
@@ -257,6 +264,10 @@ class SensorManager:
 
         except Exception as e:
             logger.error(f"Error processing sensor message: {e}")
+            logger.error(f"[MQTT] Received message on topic: {msg.topic}")
+            logger.error(f"[MQTT] Received message payload type: {type(msg.payload)}, length: {len(msg.payload)}")
+            if len(msg.payload) <= 100:  # Only log small payloads to avoid spam
+                logger.error(f"[MQTT] Received message payload: {msg.payload}")
     
     def _get_device_class(self, topic: str) -> str:
         """Extract device class from topic"""
@@ -509,6 +520,7 @@ def query_sensor_record(entity_ids: List[str], start_time: Optional[str] = None,
         JSON string containing historical sensor data
     """
     logger.info(f"query_sensor_record tool invoked for entity_ids: {entity_ids}")
+    logger.debug(f"Raw parameters - start_time: '{start_time}', end_time: '{end_time}', limit: '{limit}'")
     
     app_ctx: AppContext = mcp.get_context().request_context.lifespan_context
     
@@ -523,6 +535,29 @@ def query_sensor_record(entity_ids: List[str], start_time: Optional[str] = None,
                 rlimit = 100
         else:
             rlimit = 100
+        
+        # check start/end time, if not in ISO format, return error
+        def is_valid_iso_format(time_str: str) -> bool:
+            """Check if string is in valid ISO 8601 format"""
+            if not time_str or len(time_str) < 19:  # Minimum length for ISO format
+                return False
+            try:
+                # Try to parse as ISO format
+                datetime.fromisoformat(time_str.replace('Z', '+00:00'))
+                return True
+            except ValueError:
+                return False
+        
+        if start_time and not is_valid_iso_format(start_time):
+            return json.dumps({
+                "error": f"Invalid start_time format: '{start_time}'. Expected ISO format (YYYY-MM-DDTHH:MM:SSZ)",
+                "entity_ids": entity_ids
+            }, indent=2)
+        if end_time and not is_valid_iso_format(end_time):
+            return json.dumps({
+                "error": f"Invalid end_time format: '{end_time}'. Expected ISO format (YYYY-MM-DDTHH:MM:SSZ)",
+                "entity_ids": entity_ids
+            }, indent=2)
         
         payload = {
             "entity_ids": entity_ids,
