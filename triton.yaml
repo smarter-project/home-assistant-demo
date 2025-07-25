@@ -49,8 +49,6 @@ spec:
           volumeMounts:
             - name: triton-models
               mountPath: /models
-            - name: shm-volume
-              mountPath: /dev/shm
           resources:
             requests:
               memory: "4Gi"
@@ -60,9 +58,6 @@ spec:
         - name: triton-models
           persistentVolumeClaim:
             claimName: triton-models
-        - name: shm-volume
-          emptyDir:
-            medium: Memory
 ---
 apiVersion: v1
 kind: Service
